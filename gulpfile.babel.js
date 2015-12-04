@@ -299,11 +299,22 @@ gulp.task('html', () =>
     .pipe($.if(argv.prod, gulp.dest('dist')))
 );
 
-// 'gulp deploy' -- pushes your dist folder to Github
-gulp.task('deploy', () => {
+// 'gulp deploy:cname' -- writes CNAME file to dist folder
+gulp.task('deploy:cname', () =>
+  gulp.src('src/CNAME')
+    .pipe(gulp.dest('dist'))
+);
+
+
+// 'gulp deploy:push' -- pushes your dist folder to Github
+gulp.task('deploy:push', () => {
   return gulp.src('dist/**/*')
     .pipe($.ghPages({'branch': 'master', 'remoteUrl': 'git@github.com:GCDigitalFellows/gcdigitalfellows.github.io.git'}));
 });
+
+// 'gulp deploy' -- copies CNAME and pushes to github
+gulp.task('deploy', gulp.series('deploy:cname', 'deploy:push'));
+
 
 // 'gulp lint' -- check your JS for formatting errors using XO Space
 gulp.task('lint', () =>
