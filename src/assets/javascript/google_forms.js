@@ -9,12 +9,21 @@ function postToGoogle() {
         type: "POST",
         dataType: "xml",
         statusCode: {
+            404: function() {
+              alert( "Could not submit your application. Please email us!" );
+            }
             0: function () {
-                window.location.replace("submitted.html");
+                console.log("status: 0");
             },
             200: function () {
-                window.location.replace("submitted.html");
+                console.log("status: 200");
             }
+        },
+        error: {
+            window.location.replace("error");
+        },
+        success: {
+            window.location.replace("submitted");
         }
     });
 }

@@ -11,4 +11,4 @@ limit_posts: 0
 
 source: src
 destination: dist
-baseurl: /gcdrb
+#baseurl: /gcdrb
