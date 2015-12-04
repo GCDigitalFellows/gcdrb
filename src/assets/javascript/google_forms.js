@@ -9,23 +9,51 @@ function postToGoogle() {
         type: "POST",
         dataType: "xml",
         statusCode: {
-            404: function() {
-              alert( "Could not submit your application. Please email us!" );
-          },
-            0: function () {
-                console.log("status: 0");
+            404: function(xhr, textStatus) {
+                var msg = 'Something went wrong. Please email us. <br>Status code: ' + xhr.status + ' message: ' + textStatus,
+                    status = 'error';
+                showAlert(msg,status);
+                // console.log(xhr);
+                // console.log(textStatus);
             },
-            200: function () {
-                console.log("status: 200");
+            0: function (xhr, textStatus) {
+                var msg = 'Your application submitted successfully!',
+                    status = 'success';
+                showAlert(msg,status);
+                // console.log(xhr);
+                // console.log(textStatus);
+            },
+            200: function (xhr, textStatus) {
+                var msg = 'Your application submitted successfully!',
+                    status = 'success';
+                showAlert(msg,status);
+                // console.log(xhr);
+                // console.log(textStatus);
             }
         },
-        error: {
-            window.location.replace("error");
-        },
-        success: {
-            window.location.replace("submitted");
-        }
+        // error: function(xhr, ajaxOptions, thrownError) {
+        //     var msg = xhr.responseText + '<br>' + thrownError,
+        //         status = 'error';
+        //     showAlert(msg,status);
+        //     //window.location.replace("/error");
+        // },
+        // success: function() {
+        //     var msg = 'Your application submitted successfully!',
+        //         status = 'success';
+        //     showAlert(msg,status);
+        //     //window.location.replace("/submitted");
+        // }
     });
+}
+
+function showAlert(msg,status) {
+    var innerHTML = '<div class="alert alert-' + status + ' alert-dismissible fade in" role="alert">';
+    innerHTML += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+    innerHTML += '<span aria-hidden="true">&times;</span>';
+    innerHTML += '<span class="sr-only">Close</span>';
+    innerHTML += '</button>';
+    innerHTML += '<strong>' + msg + '</strong></div>';
+    $('#submit-status').html(innerHTML);
 }
 
 $(document).ready(function(){

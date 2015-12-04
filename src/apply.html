@@ -23,8 +23,8 @@ regenerate: true
             <label for="entry_879615756" class="col-sm-3 form-control-label application-question">Email Address</label>
             <div class="col-sm-9">
               <input type="email" name="entry.879615756" value="" class="form-control" id="entry_879615756" dir="auto" aria-label="Email Address Enter your primary email address so that we can contact you regarding your application. " aria-required="true" required="" title="" data-error="Sorry, that email address appears to be invalid">
-              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-              <span class="help-block with-errors"></span>
+              <!-- <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span class="help-block with-errors"></span> -->
             </div>
           </div>
           <div class="form-group row">
@@ -32,8 +32,8 @@ regenerate: true
             <div class="col-sm-9">
               <input type="tel" pattern="^(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$" name="entry.480611131" value="" class="form-control" id="entry_480611131" dir="auto" aria-label="Phone number where you can be reached during the bootcamp in case of scheduling changes." aria-required="true" required="" title="" data-error="Please enter your phone number using dashes to separate the area code from the number." placeholder="###-###-####">
               <small class="text-muted">So we can reach you during the bootcamp in case of scheduling changes.</small>
-              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-              <span class="help-block with-errors"></span>
+              <!-- <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span class="help-block with-errors"></span> -->
             </div>
           </div>
           <div class="form-group row">
@@ -231,13 +231,13 @@ regenerate: true
           <div class="form-group row">
             <div class="col-xs-12">
               <label class="checkbox-inline">
-                <input type="checkbox" name="entry.964671272" value="Windows" id="group_964671272_1" role="checkbox" aria-label="Windows" required="" aria-required="true"> Windows
+                <input type="checkbox" name="entry.964671272" value="Windows" id="group_964671272_1" role="checkbox" aria-label="Windows"> Windows
               </label>
               <label class="checkbox-inline">
-                <input type="checkbox" name="entry.964671272" value="Linux" id="group_964671272_2" role="checkbox" aria-label="Linux" required="" aria-required="true"> Linux
+                <input type="checkbox" name="entry.964671272" value="Linux" id="group_964671272_2" role="checkbox" aria-label="Linux"> Linux
               </label>
               <label class="checkbox-inline">
-                <input type="checkbox" name="entry.964671272" value="Mac OS X" id="group_964671272_3" role="checkbox" aria-label="Mac OS X" required="" aria-required="true"> Mac OS X
+                <input type="checkbox" name="entry.964671272" value="Mac OS X" id="group_964671272_3" role="checkbox" aria-label="Mac OS X"> Mac OS X
               </label>
             </div>
           </div>
@@ -273,6 +273,7 @@ regenerate: true
           <button type="submit" name="submit" value="Submit" id="ss-submit" class="btn btn-primary center-block m-t-lg">Submit</button>
         </fieldset>
       </form>
+      <div id="submit-status"></div>
     </div>
   </div>
 </div>
