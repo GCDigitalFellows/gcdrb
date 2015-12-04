@@ -11,7 +11,7 @@ function postToGoogle() {
         statusCode: {
             404: function() {
               alert( "Could not submit your application. Please email us!" );
-            }
+          },
             0: function () {
                 console.log("status: 0");
             },
