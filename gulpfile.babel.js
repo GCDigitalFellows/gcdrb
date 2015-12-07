@@ -18,6 +18,8 @@ import autoprefixer from 'autoprefixer';
 // Yargs for command line arguments
 import {argv} from 'yargs';
 
+var isProduction = (argv._.indexOf("deploy") > -1 ? true : argv.prod);
+
 // 'gulp clean:assets' -- deletes all assets except for images
 // 'gulp clean:dist' -- erases the dist folder
 // 'gulp clean:gzip' -- erases all the gzipped files
@@ -38,10 +40,10 @@ gulp.task('clean:metadata', () => {
 // 'gulp jekyll' -- builds your site with development settings
 // 'gulp jekyll --prod' -- builds your site with production settings
 gulp.task('jekyll', done => {
-  if (!argv.prod) {
+  if (!isProduction) {
     shell.exec('jekyll build');
     done();
-  } else if (argv.prod) {
+  } else if (isProduction) {
     shell.exec('jekyll build --config _config.yml,_config.build.yml');
     done();
   }
@@ -66,7 +68,7 @@ gulp.task('jekyll:doctor', done => {
 // then minifies, gzips and cache busts it. Does not create a Sourcemap
 gulp.task('styles', () =>
   gulp.src('src/assets/scss/style.scss')
-    .pipe($.if(!argv.prod, $.sourcemaps.init()))
+    .pipe($.if(!isProduction, $.sourcemaps.init()))
     .pipe($.sass({
       precision: 10,
       includePaths: ['bower_components/bootstrap/scss']
@@ -103,23 +105,23 @@ gulp.task('styles', () =>
       title: 'styles',
       showFiles: true
     }))
-    .pipe($.if(argv.prod, $.rename({suffix: '.min'})))
-    .pipe($.if(argv.prod, $.if('*.css', $.minifyCss())))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rename({suffix: '.min'})))
+    .pipe($.if(isProduction, $.if('*.css', $.minifyCss())))
+    .pipe($.if(isProduction, $.size({
       title: 'minified styles',
       showFiles: true
     })))
-    .pipe($.if(argv.prod, $.rev()))
-    .pipe($.if(!argv.prod, $.sourcemaps.write('.')))
-    .pipe($.if(argv.prod, gulp.dest('.tmp/assets/stylesheets')))
-    .pipe($.if(argv.prod, $.if('*.css', $.gzip({append: true}))))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rev()))
+    .pipe($.if(!isProduction, $.sourcemaps.write('.')))
+    .pipe($.if(isProduction, gulp.dest('.tmp/assets/stylesheets')))
+    .pipe($.if(isProduction, $.if('*.css', $.gzip({append: true}))))
+    .pipe($.if(isProduction, $.size({
       title: 'gzipped styles',
       gzip: true,
       showFiles: true
     })))
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
-    .pipe($.if(!argv.prod, browserSync.stream()))
+    .pipe($.if(!isProduction, browserSync.stream()))
 );
 
 // vendor styles
@@ -131,7 +133,7 @@ gulp.task('styles:vendor', () =>
     'bower_components/font-mfizz/css/font-mfizz.css'
   ])
     .pipe($.newer('.tmp/assets/stylesheets/vendor.css', {dest: '.tmp/assets/stylesheets', ext: '.css'}))
-    .pipe($.if(!argv.prod, $.sourcemaps.init()))
+    .pipe($.if(!isProduction, $.sourcemaps.init()))
     .pipe($.concat('vendor.css'))
     .pipe($.postcss([
       autoprefixer({browsers: 'last 1 version'})
@@ -140,23 +142,23 @@ gulp.task('styles:vendor', () =>
       title: 'styles',
       showFiles: true
     }))
-    .pipe($.if(argv.prod, $.rename({suffix: '.min'})))
-    .pipe($.if(argv.prod, $.if('*.css', $.minifyCss())))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rename({suffix: '.min'})))
+    .pipe($.if(isProduction, $.if('*.css', $.minifyCss())))
+    .pipe($.if(isProduction, $.size({
       title: 'minified styles',
       showFiles: true
     })))
-    .pipe($.if(argv.prod, $.rev()))
-    .pipe($.if(!argv.prod, $.sourcemaps.write('.')))
-    .pipe($.if(argv.prod, gulp.dest('.tmp/assets/stylesheets')))
-    .pipe($.if(argv.prod, $.if('*.css', $.gzip({append: true}))))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rev()))
+    .pipe($.if(!isProduction, $.sourcemaps.write('.')))
+    .pipe($.if(isProduction, gulp.dest('.tmp/assets/stylesheets')))
+    .pipe($.if(isProduction, $.if('*.css', $.gzip({append: true}))))
+    .pipe($.if(isProduction, $.size({
       title: 'gzipped styles',
       gzip: true,
       showFiles: true
     })))
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
-    .pipe($.if(!argv.prod, browserSync.stream()))
+    .pipe($.if(!isProduction, browserSync.stream()))
 );
 
 // 'gulp scripts' -- creates a index.js file from your JavaScript files and
@@ -168,29 +170,29 @@ gulp.task('scripts', () =>
   // top to bottom, so you want vendor scripts etc on top
   gulp.src('src/assets/javascript/*.js')
     .pipe($.newer('.tmp/assets/javascript/*.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
-    .pipe($.if(!argv.prod, $.sourcemaps.init()))
+    .pipe($.if(!isProduction, $.sourcemaps.init()))
     .pipe($.concat('main.js'))
     .pipe($.size({
       title: 'scripts',
       showFiles: true
     }))
-    .pipe($.if(argv.prod, $.rename({suffix: '.min'})))
-    .pipe($.if(argv.prod, $.if('*.js', $.uglify({preserveComments: 'some'}))))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rename({suffix: '.min'})))
+    .pipe($.if(isProduction, $.if('*.js', $.uglify({preserveComments: 'some'}))))
+    .pipe($.if(isProduction, $.size({
       title: 'minified scripts',
       showFiles: true
     })))
-    .pipe($.if(argv.prod, $.rev()))
-    .pipe($.if(!argv.prod, $.sourcemaps.write('.')))
-    .pipe($.if(argv.prod, gulp.dest('.tmp/assets/javascript')))
-    .pipe($.if(argv.prod, $.if('*.js', $.gzip({append: true}))))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rev()))
+    .pipe($.if(!isProduction, $.sourcemaps.write('.')))
+    .pipe($.if(isProduction, gulp.dest('.tmp/assets/javascript')))
+    .pipe($.if(isProduction, $.if('*.js', $.gzip({append: true}))))
+    .pipe($.if(isProduction, $.size({
       title: 'gzipped scripts',
       gzip: true,
       showFiles: true
     })))
     .pipe(gulp.dest('.tmp/assets/javascript'))
-    .pipe($.if(!argv.prod, browserSync.stream()))
+    .pipe($.if(!isProduction, browserSync.stream()))
 );
 
 // gulp scripts:vendor
@@ -210,29 +212,29 @@ gulp.task('scripts:vendor', () =>
     //'bower_components/bootstrap/dist/js/umd/scrollspy.js'
   ])
     .pipe($.newer('.tmp/assets/javascript/vendor.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
-    .pipe($.if(!argv.prod, $.sourcemaps.init()))
+    .pipe($.if(!isProduction, $.sourcemaps.init()))
     .pipe($.concat('vendor.js'))
     .pipe($.size({
       title: 'scripts',
       showFiles: true
     }))
-    .pipe($.if(argv.prod, $.rename({suffix: '.min'})))
-    .pipe($.if(argv.prod, $.if('*.js', $.uglify({preserveComments: 'some'}))))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rename({suffix: '.min'})))
+    .pipe($.if(isProduction, $.if('*.js', $.uglify({preserveComments: 'some'}))))
+    .pipe($.if(isProduction, $.size({
       title: 'minified scripts',
       showFiles: true
     })))
-    .pipe($.if(argv.prod, $.rev()))
-    .pipe($.if(!argv.prod, $.sourcemaps.write('.')))
-    .pipe($.if(argv.prod, gulp.dest('.tmp/assets/javascript')))
-    .pipe($.if(argv.prod, $.if('*.js', $.gzip({append: true}))))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.rev()))
+    .pipe($.if(!isProduction, $.sourcemaps.write('.')))
+    .pipe($.if(isProduction, gulp.dest('.tmp/assets/javascript')))
+    .pipe($.if(isProduction, $.if('*.js', $.gzip({append: true}))))
+    .pipe($.if(isProduction, $.size({
       title: 'gzipped scripts',
       gzip: true,
       showFiles: true
     })))
     .pipe(gulp.dest('.tmp/assets/javascript'))
-    .pipe($.if(!argv.prod, browserSync.stream()))
+    .pipe($.if(!isProduction, browserSync.stream()))
 );
 
 
@@ -282,38 +284,22 @@ gulp.task('fonts', () =>
 // 'gulp html --prod' -- minifies and gzips our HTML files
 gulp.task('html', () =>
   gulp.src('dist/**/*.html')
-    .pipe($.if(argv.prod, $.htmlmin({
+    .pipe($.if(isProduction, $.htmlmin({
       removeComments: true,
       collapseWhitespace: true,
       collapseBooleanAttributes: true,
       removeAttributeQuotes: true,
       removeRedundantAttributes: true
     })))
-    .pipe($.if(argv.prod, $.size({title: 'optimized HTML'})))
-    .pipe($.if(argv.prod, gulp.dest('dist')))
-    .pipe($.if(argv.prod, $.gzip({append: true})))
-    .pipe($.if(argv.prod, $.size({
+    .pipe($.if(isProduction, $.size({title: 'optimized HTML'})))
+    .pipe($.if(isProduction, gulp.dest('dist')))
+    .pipe($.if(isProduction, $.gzip({append: true})))
+    .pipe($.if(isProduction, $.size({
       title: 'gzipped script',
       gzip: true
     })))
-    .pipe($.if(argv.prod, gulp.dest('dist')))
+    .pipe($.if(isProduction, gulp.dest('dist')))
 );
-
-// 'gulp deploy:cname' -- writes CNAME file to dist folder
-gulp.task('deploy:cname', () =>
-  gulp.src(['src/CNAME','src/README.md'])
-    .pipe(gulp.dest('dist'))
-);
-
-
-// 'gulp deploy:push' -- pushes your dist folder to Github
-gulp.task('deploy:push', () => {
-  return gulp.src('dist/**/*')
-    .pipe($.ghPages({'branch': 'master', 'remoteUrl': 'git@github.com:GCDigitalFellows/gcdigitalfellows.github.io.git'}));
-});
-
-// 'gulp deploy' -- copies CNAME and pushes to github
-gulp.task('deploy', gulp.series('deploy:cname', 'deploy:push'));
 
 
 // 'gulp lint' -- check your JS for formatting errors using XO Space
@@ -379,6 +365,29 @@ gulp.task('build', gulp.series(
   gulp.series('clean:assets', 'clean:gzip'),
   gulp.series('assets', 'inject:head', 'inject:footer'),
   gulp.series('jekyll', 'assets:copy', 'html')
+));
+
+
+// 'gulp deploy:cname' -- writes CNAME file to dist folder
+gulp.task('deploy:cname', () =>
+  gulp.src([
+    'src/CNAME'
+  ])
+  .pipe(gulp.dest('dist'))
+);
+
+
+// 'gulp deploy:push' -- pushes your dist folder to Github
+gulp.task('deploy:push', () => {
+  return gulp.src('dist/**/*')
+    .pipe($.ghPages({'branch': 'master', 'remoteUrl': 'git@github.com:GCDigitalFellows/gcdigitalfellows.github.io.git'}));
+});
+
+// 'gulp deploy' -- copies CNAME and pushes to github
+gulp.task('deploy', gulp.series(
+  'build',
+  //'deploy:cname',
+  'deploy:push'
 ));
 
 // 'gulp clean' -- erases your assets and gzipped files
