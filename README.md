@@ -62,6 +62,10 @@ Run the script to download data from google docs:
 ```sh
 $ gulp data
 ```
+##Update Content
+To update course descriptions, edit the [google docs spreadsheet](https://docs.google.com/spreadsheets/d/16RfbdrnDHhRgP2iZwNw6AVSyWy5VoKn0nB0CpyMa658/edit?usp=sharing)
+**Don't edit the source**
 ## Owner
 
 > [GC Digital Fellows](gcdigitalfellows.github.io)
+
