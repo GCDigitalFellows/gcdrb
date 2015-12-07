@@ -301,7 +301,7 @@ gulp.task('html', () =>
 
 // 'gulp deploy:cname' -- writes CNAME file to dist folder
 gulp.task('deploy:cname', () =>
-  gulp.src('src/CNAME')
+  gulp.src(['src/CNAME','src/README.md'])
     .pipe(gulp.dest('dist'))
 );
 
