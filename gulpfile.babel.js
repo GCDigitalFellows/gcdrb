@@ -37,7 +37,7 @@ gulp.task('images', require('./gulp-tasks/images')(gulp, $));
 var inject = require('./gulp-tasks/inject')(gulp, $, streamSeries);
 gulp.task('inject:head', inject.head);
 gulp.task('inject:footer', inject.footer);
-gulp.task('jekyll', require('./gulp-tasks/jekyll')(gulp, shell));
+gulp.task('jekyll', require('./gulp-tasks/jekyll')(gulp, shell, isProduction));
 gulp.task('rebuild', require('./gulp-tasks/rebuild')(gulp));
 var scripts = require('./gulp-tasks/scripts')(gulp, $, isProduction, browserSync);
 gulp.task('scripts', scripts.scripts);

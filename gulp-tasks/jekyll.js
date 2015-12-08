@@ -1,4 +1,4 @@
-module.exports = function (gulp, shell) {
+module.exports = function (gulp, shell, isProduction) {
   return function (done) {
     if (!isProduction) {
       shell.exec('jekyll build');
