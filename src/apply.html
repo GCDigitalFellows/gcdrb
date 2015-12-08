@@ -7,8 +7,9 @@ regenerate: true
 <div class="container m-t-lg">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <p>Thank you for your interest in participating in the GC Digital Research Bootcamp (DRB), January 19-22nd, 2016. Participation is free; however, applications are required. All levels of experience are welcome. Applications will be considered on a rolling basis.</p>
-      <p>If you have any questions, please contact: gc.digitalfellows@gmail.com. We look forward to seeing you there!</p>
+      <p>Thank you for your interest in participating in the GC Digital Research Bootcamp (DRB), January 19-22nd, 2016.</p>
+      <p>Participation is free; however, applications are required. All levels of experience are welcome. Applications can be submitted immediately and considered on a rolling basis. Preference will be given to applicants who apply before December 18th.</p>
+      <p>If you have any questions, please <a href="{{site.baseurl}}/#contact">contact us</a>. We look forward to seeing you there!</p>
     </div>
     <div class="card col-md-8 col-md-offset-2 p-a-md">
       <form id="google-form" target="_self" onsubmit="" action="" role="form" data-toggle="validator">
@@ -16,15 +17,15 @@ regenerate: true
           <div class="form-group row">
             <label for="entry_619223010" class="col-sm-3 form-control-label application-question">Full Name</label>
             <div class="col-sm-9">
-              <input type="text" name="entry.619223010" value="" class="form-control" id="entry_619223010" dir="auto" aria-label="Your name" aria-required="true" required="" title="">
+              <input type="text" name="entry.619223010" value="" class="form-control" id="entry_619223010" dir="auto" aria-label="Your name" aria-required="true" required="" title="" data-error="Please enter your name">
+              <span class="help-block with-errors"></span>
             </div>
           </div>
           <div class="form-group row">
             <label for="entry_879615756" class="col-sm-3 form-control-label application-question">Email Address</label>
             <div class="col-sm-9">
               <input type="email" name="entry.879615756" value="" class="form-control" id="entry_879615756" dir="auto" aria-label="Email Address Enter your primary email address so that we can contact you regarding your application. " aria-required="true" required="" title="" data-error="Sorry, that email address appears to be invalid">
-              <!-- <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-              <span class="help-block with-errors"></span> -->
+                <span class="help-block with-errors"></span>
             </div>
           </div>
           <div class="form-group row">
@@ -32,15 +33,14 @@ regenerate: true
             <div class="col-sm-9">
               <input type="tel" pattern="^(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$" name="entry.480611131" value="" class="form-control" id="entry_480611131" dir="auto" aria-label="Phone number where you can be reached during the bootcamp in case of scheduling changes." aria-required="true" required="" title="" data-error="Please enter your phone number using dashes to separate the area code from the number." placeholder="###-###-####">
               <small class="text-muted">So we can reach you during the bootcamp in case of scheduling changes.</small>
-              <!-- <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-              <span class="help-block with-errors"></span> -->
+              <span class="help-block with-errors"></span>
             </div>
           </div>
           <div class="form-group row">
             <label class="form-control-label col-sm-3 application-question" for="entry_1459909620">Your program at The Graduate Center
             </label>
             <div class="col-sm-9">
-              <select name="entry.1459909620" id="entry_1459909620" class="form-control" aria-label="Your program at The Graduate Center If you are not a Graduate Center student, please select &quot;Other&quot; " aria-required="true" required="">
+              <select name="entry.1459909620" id="entry_1459909620" class="form-control" aria-label="Your program at The Graduate Center If you are not a Graduate Center student or faculty, please select &quot;Other&quot; " aria-required="true" required="">
                 <option value="" disabled selected hidden>Select your program</option>
                 <option value="MALS"> MALS</option>
                 <option value="Anthropology"> Anthropology</option>
@@ -83,7 +83,7 @@ regenerate: true
             </div>
           </div>
           <div id="other-program" class="form-group row" hidden>
-            <label class="form-control-label col-xs-3" for="entry_1225798503">Specify</label>
+            <label class="form-control-label application-question col-xs-3" for="entry_1225798503">Please specify</label>
             <div class="col-xs-9">
               <input type="text" name="entry.1225798503" value="" class="form-control" id="entry_1225798503" dir="auto" aria-label="If you selected &quot;Other,&quot; please share your CUNY campus.  " title="">
             </div>
@@ -143,6 +143,7 @@ regenerate: true
                 <label><input type="checkbox" name="entry.735949125" value="HTML/CSS" id="group_735949125_7" role="checkbox"> HTML/CSS</label>
               </div>
             </div>
+
             <div class="col-sm-4 col-sm-offset-1">
               <div class="checkbox">
                 <label><input type="checkbox" name="entry.735949125" value="Data Management" id="group_735949125_8" role="checkbox"> Data Management</label>
@@ -154,10 +155,13 @@ regenerate: true
                 <label><input type="checkbox" name="entry.735949125" value="NLTK (Natural Language Toolkit using Python)" id="group_735949125_10" role="checkbox"> NLTK (Natural Language Toolkit using Python)</label>
               </div>
               <div class="checkbox">
-                <label><input type="checkbox" name="entry.735949125" value="Census Data and PUMAs" id="group_735949125_11" role="checkbox"> Census Data and PUMAs</label>
+                <label><input type="checkbox" name="entry.735949125" value="Geospatial Mapping" id="group_735949125_11" role="checkbox"> Geospatial Mapping</label>
               </div>
               <div class="checkbox">
-                <label><input type="checkbox" name="entry.735949125" value="__other_option__" id="group_735949125_12" role="checkbox" class="ss-q-checkbox ss-q-other-toggle"> Other (specify):</label>
+                <label><input type="checkbox" name="entry.735949125" value="Text Encoding" id="group_735949125_12" role="checkbox"> Text Encoding</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="entry.735949125" value="__other_option__" id="group_735949125_13" role="checkbox" class="ss-q-checkbox ss-q-other-toggle"> Other (specify):</label>
               </div>
               <div id="other-interest" class="form-group" hidden>
                 <label for="entry.735949125.other_option_response" class="sr-only">Specify</label>
@@ -205,6 +209,12 @@ regenerate: true
                  <td class="table-choices"><label class="sr-only">Somewhat</label><input type="radio" name="entry.734444321" value="2" id="group_734444321_1" role="radio" aria-label="Yes" required="" aria-required="true"></td>
                  <td class="table-choices"><label class="sr-only">Very comfortable</label><input type="radio" name="entry.734444321" value="3" id="group_734444321_1" role="radio" aria-label="Yes" required="" aria-required="true"></td>
               </tr>
+              <tr>
+                <th scope="row"><label class="col-xs-12" for="entry_1364876473">How comfortable are you using Python?</label></th>
+                 <td class="table-choices"><label class="sr-only">Not at all</label><input type="radio" name="entry.1364876473" value="1" id="group_1364876473_1" role="radio" aria-label="Yes" required="" aria-required="true"></td>
+                 <td class="table-choices"><label class="sr-only">Somewhat</label><input type="radio" name="entry.1364876473" value="2" id="group_1364876473_1" role="radio" aria-label="Yes" required="" aria-required="true"></td>
+                 <td class="table-choices"><label class="sr-only">Very comfortable</label><input type="radio" name="entry.1364876473" value="3" id="group_1364876473_1" role="radio" aria-label="Yes" required="" aria-required="true"></td>
+              </tr>
             </tbody>
           </table>
 
@@ -222,6 +232,14 @@ regenerate: true
             <label class="checkbox-inline">
               <input type="radio" name="entry.1726201261" value="Maybe" id="group_1726201261_3" role="radio" aria-label="Maybe" required="" aria-required="true"> Maybe
             </label>
+          </div>
+
+          <div class="form-group row" id="laptop-os" hidden>
+            <label for="entry_1080716933" class="col-xs-12 form-control-label application-question">What operating system are you currently using on your laptop?</label>
+            <div class="col-xs-12">
+              <input type="text" name="entry.1080716933" value="" class="form-control" id="entry_1080716933" dir="auto" aria-label="What operating system are you currently using on your laptop?" title="" >
+              <small class="text-muted">If you are unsure, enter "unknown."</small>
+            </div>
           </div>
 
           <div class="form-group row">
