@@ -42,8 +42,12 @@
 
   $(function () {
     var contactform = document.getElementById('contactform');
+    var emailAddress = 'gc.digital';
+    emailAddress += '@';
+    emailAddress += 'gmail';
+    emailAddress += '.com';
     if (contactform) {
-      contactform.setAttribute('action', '//formspree.io/' + 'gc.digitalfellows' + '@' + 'gm' + 'ail' + '.' + 'com');
+      contactform.setAttribute('action', '//formspree.io/' + emailAddress);
     }
   });
 
