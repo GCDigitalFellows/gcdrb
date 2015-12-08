@@ -6,6 +6,6 @@ module.exports = function (gulp, shell, isProduction) {
     } else if (isProduction) {
       shell.exec('jekyll build --config _config.yml,_config.build.yml');
       done();
-    };
+    }
   };
 };
