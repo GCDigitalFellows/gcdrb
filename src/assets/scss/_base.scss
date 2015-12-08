@@ -397,3 +397,7 @@ body {
   text-align: center;
   width: 16.7%;
 }
+
+.help-block.with-errors {
+  color: $brand-danger;
+}
