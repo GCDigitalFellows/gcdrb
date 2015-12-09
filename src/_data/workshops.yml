@@ -1,108 +1,93 @@
-- description: Introduction to the UNIX command line. Topics covered will include
-    the filesystem, environment, useful commands, working with files and folders,
-    input and output using pipes and simple command line programs.
-  icon: fa-terminal
+- title: Command Line
   link: terminal
+  tagline: Complete complex tasks with just a few keystrokes.
+  icon: fa-terminal
   repo: gcdrb-command-line
   session: '1'
-  tagline: Complete complex tasks with just a few keystrokes.
-  title: Command Line
-- description: Git is a tool for managing changes to a set of files. It allows users
-    to store new changes, recover old versions reliably, and helps manage conflicting
-    changes made by different users.
-  icon: fa-code-fork
+  description: 'Introduction to the UNIX command line. Topics covered will include the filesystem, environment, useful commands, working with files and folders, input and output using pipes and simple command line programs.'
+- title: Git
   link: git
+  tagline: Simplify collaboration using version control systems.
+  icon: fa-code-fork
   repo: gcdrb-git
   session: '3'
-  tagline: Simplify collobaration using version control systems.
-  title: Git
-- description: Python is a programming language that can be used for a wide range
-    of tasks, from collecting data to analysis to building web applications.
-  icon: icon-python
+  description: 'Git is a tool for managing changes to a set of files. It allows users to store new changes, recover old versions reliably, and helps manage conflicting changes made by different users.'
+- title: Python
   link: python
+  tagline: |
+    Use Python for everything from data analysis to building websites.
+  icon: icon-python
   repo: gcdrb-python
   session: '5'
-  tagline: Use Python for everything from data analysis to building websites.
-  title: Python
-- description: Store complex data using databases and manipulating, analyzing, and
-    searching databases using SQL.
-  icon: fa-database
+  description: 'Python is a programming language that can be used for a wide range of tasks, from collecting data to analysis to building web applications.'
+- title: Databases
   link: databases
+  tagline: Seamlessly integrate data management into digital research.
+  icon: fa-database
   repo: gcdrb-databases
   session: '7'
-  tagline: Seamlessly integrate data management into digital research.
-  title: Databases
-- description: 'Manage and analyse tabular data using Pandas, and work with N-dimensional
-    array data using numpy and scipy.  '
-  icon: fa-flask
+  description: 'Store complex data using databases and manipulating, analyzing, and searching databases using SQL.'
+- title: Scientific Python
   link: scipy
+  tagline: 'Analyse and manage data using scientific computing libraries. '
+  icon: fa-flask
   repo: gcdrb-scipy
   session: '11'
-  tagline: 'Analyse and manage data using scientific computing libraries. '
-  title: Scientific Python
-- description: 'Implement a modern website that uses HTML for content, CSS to control
-    appearance, and JavaScript to dictate behavior. '
-  icon: icon-html
+  description: 'Manage and analyse tabular data using Pandas, and work with N-dimensional array data using numpy and scipy.  '
+- title: HTML/CSS/Javascript
   link: html
+  tagline: Share your research using web development fundamentals.
+  icon: icon-html
   repo: gcdrb-html
   session: '14'
-  tagline: Share your research using web development fundamentals.
-  title: HTML/CSS/Javascript
-- description: Dealing with some common problems with datasets, including file types
-    and conversions, inconsistent metadata, normalization, and working with APIs.
-  icon: fa-tasks
+  description: 'Implement a modern website that uses HTML for content, CSS to control appearance, and JavaScript to dictate behavior. '
+- title: Data Cleaning
   link: data
+  tagline: |
+    Build a robust dataset using data cleaning best practices.
+  icon: fa-tasks
   repo: gcdrb-data-cleaning
   session: '9'
-  tagline: Build a robust dataset using data cleaning best practices.
-  title: Data Cleaning
-- description: Programmatic data visualization using Python and Javascript, including
-    basic geospatial visualization
-  icon: fa-area-chart
+  description: 'Dealing with some common problems with datasets, including file types and conversions, inconsistent metadata, normalization, and working with APIs.'
+- title: Exploratory Visualization
   link: viza
+  tagline: 'Generate visualizations to uncover the story the data is telling. '
+  icon: fa-area-chart
   repo: gcdrb-data-viz-a
   session: '15'
-  tagline: 'Generate visualizations to understand the story the data is telling. '
-  title: Data Viz A
-- description: 'Data visualization using interactive tools, including basic mapping
-    tools. '
-  icon: fa-map
+  description: 'Programmatic data visualization using Python and Javascript, including basic geospatial visualization'
+- title: Information Visualization
   link: vizb
+  tagline: Create aesthetically appealing narratives to share your results.
+  icon: fa-map
   repo: gcdrb-data-viz-b
   session: '15'
-  tagline: Create aesthetically appealing narratives to share your results.
-  title: Data Viz B
-- description: NLTK supports classification, tokenization, stemming, tagging, parsing,
-    and semantic reasoning, and has easy-to-use interfaces to corpora and lexical
-    resources.
-  icon: fa-book
+  description: 'Data visualization using interactive tools, including basic mapping tools. '
+- title: NLTK
   link: nltk
+  tagline: 'Process, analyze, and summarize textual data using NLTK'
+  icon: fa-book
   repo: gcdrb-nltk
   session: '11'
-  tagline: Process, analyze, and summarize textual data using NLTK
-  title: NLTK
-- description: Build a wordpress site to control online branding and learn about various
-    add-ons to make the site work for you.
-  icon: fa-users
+  description: 'NLTK supports classification, tokenization, stemming, tagging, parsing, and semantic reasoning, and has easy-to-use interfaces to corpora and lexical resources.'
+- title: Digital Identity/Wordpress
   link: identity
+  tagline: Gain some control over how people encounter research on the web.
+  icon: fa-users
   repo: gcdrb-digital-identity
   session: '13'
-  tagline: Gain some control over how people encounter research on the web.
-  title: Digital Identity/Wordpress
-- description: 'Distributed data aware data structures such as blaze and pytables,
-    computing libraries such as disco, and remote environments such as EC2. '
-  icon: icon-hadoop
+  description: Build a wordpress site to control online branding and learn about various add-ons to make the site work for you.
+- title: Big Data Management
   link: bigdata
+  tagline: 'Manage large datasets using distributed computing tools. '
+  icon: icon-hadoop
   repo: gcdrb-big-data
   session: '14'
-  tagline: 'Manage large datasets using distributed computing tools. '
-  title: Big Data Management
-- description: 'Regression analysis, data preprocessing, model selection, supervised
-    and unsupervised machine learning and dimension reduction using the sklearn machine
-    learning library. '
-  icon: fa-magic
+  description: 'Distributed data aware data structures such as blaze and pytables, computing libraries such as disco, and remote environments such as EC2. '
+- title: Machine Learning
   link: ml
+  tagline: Explore the structure of data using machine learning algorithms.
+  icon: fa-magic
   repo: gcdrb-machine-learning
   session: '13'
-  tagline: Explore the structure of data using machine learning algorithms.
-  title: Machine Learning
+  description: 'Regression analysis, data preprocessing, model selection, supervised and unsupervised machine learning and dimension reduction using the sklearn machine learning library. '

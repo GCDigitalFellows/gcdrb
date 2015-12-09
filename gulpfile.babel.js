@@ -6,6 +6,10 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 var $ = gulpLoadPlugins();
 var streamSeries = require('stream-series');
+var request = require('request');
+var babyparse = require('babyparse');
+var yaml = require('js-yaml');
+var fs = require('fs');
 
 // Delete stuff
 import del from 'del';
@@ -26,7 +30,7 @@ gulp.task('clean:assets', clean.assets);
 gulp.task('clean:dist', clean.dist);
 gulp.task('clean:gzip', clean.gzip);
 gulp.task('clean:metadata', clean.metadata);
-gulp.task('data', require('./gulp-tasks/data')(gulp, shell));
+gulp.task('data', require('./gulp-tasks/data')(request, babyparse, yaml, fs));
 var deploy = require('./gulp-tasks/deploy')(gulp);
 gulp.task('deploy:cname', deploy.cname);
 gulp.task('deploy:push', deploy.push);
