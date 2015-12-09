@@ -42,7 +42,7 @@
 
   $(function () {
     var contactform = document.getElementById('contactform');
-    var emailAddress = 'gc.digital';
+    var emailAddress = 'gc.digitalfellows';
     emailAddress += '@';
     emailAddress += 'gmail';
     emailAddress += '.com';
