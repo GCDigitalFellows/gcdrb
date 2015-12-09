@@ -29,8 +29,8 @@ You need a few tools installed to build and run this website:
    * uninstall gulp if you already have it installed: `npm uninstall gulp -g`
    * install gulp `npm install -g gulpjs/gulp-cli#4.0 gulpjs/gulp#4.0`
  3. ~~Make sure you have python installed (needs version 2.x)~~
-   ~~* install pyyaml `pip install pyyaml`~~
-   ~~* Feel free to set up a virtualenv for this project. Python's only used to collect data from google docs. I probably should've written those scripts in ruby, but oh well...~~
+   * ~~install pyyaml `pip install pyyaml`~~
+   * ~~Feel free to set up a virtualenv for this project. Python's only used to collect data from google docs. I probably should've written those scripts in ruby, but oh well...~~
  4. Make sure you have ruby, [rubygems](https://rubygems.org/pages/download), and [bundler](http://bundler.io/) installed.
 
 Now you're ready to clone and install:
