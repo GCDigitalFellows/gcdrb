@@ -11,7 +11,7 @@
   - [ ] Possibly redo the mobile menu so that it's a stacked list instead of horizontal on mobile
 - [ ] Move "apply now" button above text
 - [ ] Para 1 in section id "about": range of tools and methods for doing digital research --> range of digital tools and methods for doing research
-- [ ] Para 3 sentence 1: change fourd -> four
+- [x] Para 3 sentence 1: change fourd -> four
 - [ ] Para 3 in section id "about": Change "The organizers are still working out the final schedule, but some of the topics are listed below." to "A preliminary list of workshop topics to expect can be found below." [NB: We don't really need to tell them the exact order until January honestly, since we state that we expect participation on all four days anyway.]
 - [ ] Para 3 last sentence: Strike and change to "Continue to watch this site during December and January for additional information regarding instructors, a workshop schedule, and more."
 - [ ] We should probably have a line at the end about the application process: "Applications require only a short statement of interest, and will be considered on a rolling basis. We advise applicants to apply early to secure a spot. Please direct questions and inquiries to gc.digitalfellows@gmail.com."
