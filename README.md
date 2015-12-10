@@ -6,12 +6,12 @@
 - [x] Fix responsive header and footer
   - [x] Header disappears on mobile
   - [x] Footer is all over the place (probably related to body positioning css)
-- [ ] Header/menu on mobile...
+- [x] Header/menu on mobile...
   - [x] Move logo outside of the collapsable menu
-  - [ ] Possibly redo the mobile menu so that it's a stacked list instead of horizontal on mobile
+  - ~~[ ] Possibly redo the mobile menu so that it's a stacked list instead of horizontal on mobile~~
 - [x] Fix contact form on mobile
 - [x] Fix contact form email address
-- [ ] Move "apply now" button above text
+- [x] Move "apply now" button above text
 - [ ] Para 1 in section id "about": range of tools and methods for doing digital research --> range of digital tools and methods for doing research
 - [x] Para 3 sentence 1: change fourd -> four
 - [ ] Para 3 in section id "about": Change "The organizers are still working out the final schedule, but some of the topics are listed below." to "A preliminary list of workshop topics to expect can be found below." [NB: We don't really need to tell them the exact order until January honestly, since we state that we expect participation on all four days anyway.]
