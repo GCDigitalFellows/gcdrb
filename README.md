@@ -2,13 +2,15 @@
 
 ##To-Dos
 
-- [ ] Add "success" page after application is submitted
+- [x] Add "success" page after application is submitted
 - [ ] Fix responsive header and footer
   - [ ] Header disappears on mobile
   - [ ] Footer is all over the place (probably related to body positioning css)
 - [ ] Header/menu on mobile...
   - [ ] Move logo outside of the collapsable menu
   - [ ] Possibly redo the mobile menu so that it's a stacked list instead of horizontal on mobile
+- [x] Fix contact form on mobile
+- [x] Fix contact form email address
 - [ ] Move "apply now" button above text
 - [ ] Para 1 in section id "about": range of tools and methods for doing digital research --> range of digital tools and methods for doing research
 - [x] Para 3 sentence 1: change fourd -> four

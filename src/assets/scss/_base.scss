@@ -38,11 +38,11 @@ h6 {
   @include sans-serif-font;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
+// p {
+//   font-size: 16px;
+//   line-height: 1.5;
+//   margin-bottom: 20px;
+// }
 
 .bg-primary {
   background-color: $theme-primary;
@@ -92,15 +92,12 @@ aside {
   min-height: $nav-height;
   @include sans-serif-font;
   @include transition-all;
-  .navbar-header .navbar-brand {
-    color: $theme-primary;
-    @include sans-serif-font;
-    font-weight: 700;
-    text-transform: uppercase;
-    &:hover,
-    &:focus {
-      color: darken($theme-primary, 10%);
-    }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .navbar-toggler {
+    padding: .25rem .5rem;
+    font-size: 1.5rem;
   }
   .nav {
     > li {
@@ -129,12 +126,8 @@ aside {
   @include media-breakpoint-up(md) {
     background-color: transparent;
     border-color: rgba(white, .3);
-    .navbar-header .navbar-brand {
-      color: rgba(white, .7);
-      &:hover,
-      &:focus {
-        color: white;
-      }
+    .navbar-brand {
+      margin-right: 1rem;
     }
     .nav > li > a,
     .nav > li > a:focus {
@@ -166,8 +159,13 @@ aside {
 }
 
 .site-logo {
-  height: 2rem;
+  height: 1.5rem;
   width: auto;
+}
+@include media-breakpoint-up(sm) {
+  .site-logo {
+    height: 2rem;
+  }
 }
 
 // Header
@@ -184,12 +182,12 @@ header {
     min-height: 100%;
   }
   &.header-default {
-    min-height: 10rem;
+    min-height: 8rem;
   }
   .header-content {
     position: relative;
     text-align: center;
-    padding: 100px 15px 100px;
+    padding: 5rem 2rem 2rem;
     width: 100%;
     .header-content-inner {
       h1 {
@@ -233,9 +231,9 @@ header {
 }
 
 main {
-  position: absolute;
-  top: $nav-height;
-  width: 100%;
+  // position: absolute;
+  // top: $nav-height;
+  // width: 100%;
   @include media-breakpoint-up(md) {
     position: relative;
     top: 0;
