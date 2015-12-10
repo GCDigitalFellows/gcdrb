@@ -18,7 +18,7 @@
 - [ ] Para 3 last sentence: Strike and change to "Continue to watch this site during December and January for additional information regarding instructors, a workshop schedule, and more."
 - [ ] We should probably have a line at the end about the application process: "Applications require only a short statement of interest, and will be considered on a rolling basis. We advise applicants to apply early to secure a spot. Please direct questions and inquiries to gc.digitalfellows@gmail.com."
 - [ ] There's something wonky going on in the topics container... the bottom 2 rows of boxes are bumping to the left and nothing populates the third column. (this is an issue with bootstrap 4 and browser positioning of column items. not easy to fix)
-- [ ] On the application, the "Other (specify):" box for "which workshops may be of interest" doesn't have a text entry area. (there is a box that only appears if "other" is checked, but looks like the javascript broke during application updates)
+- [x] On the application, the "Other (specify):" box for "which workshops may be of interest" doesn't have a text entry area. (there is a box that only appears if "other" is checked, but looks like the javascript broke during application updates)
 - [ ] For the "Do you have a laptop" question, please add in the Note: "Having a laptop is not required."
 - [ ] Similarly, under the "what operating systems" question, please also add to the note "Acceptance is not contingent on familiarity with a particular operating system."
 

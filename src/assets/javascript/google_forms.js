@@ -54,8 +54,8 @@ $(document).ready(function () {
     }
   });
 
-  $('#group_735949125_12').change(function () {
-    if ($('#group_735949125_12').is(':checked')) {
+  $('#group_735949125_13').change(function () {
+    if ($('#group_735949125_13').is(':checked')) {
       $('#other-interest').removeAttr('hidden');
     } else {
       $('#other-interest').attr('hidden', '');
