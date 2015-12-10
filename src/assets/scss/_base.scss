@@ -48,6 +48,10 @@ h6 {
   background-color: $theme-primary;
 }
 
+.bg-alternate {
+  background-color: #FFF;  
+}
+
 .bg-dark {
   background-color: $theme-dark;
   color: white;
@@ -332,7 +336,8 @@ footer {
 
 // Button Styles
 .btn-default {
-  @include button-variant($theme-dark, white, white);
+  background: #d67964;
+  color: #ffffff;
 }
 
 .btn-primary {
