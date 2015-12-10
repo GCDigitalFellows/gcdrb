@@ -12,12 +12,12 @@
 - [x] Fix contact form on mobile
 - [x] Fix contact form email address
 - [x] Move "apply now" button above text
-- [ ] Para 1 in section id "about": range of tools and methods for doing digital research --> range of digital tools and methods for doing research
+- [x] Para 1 in section id "about": range of tools and methods for doing digital research --> range of digital tools and methods for doing research
 - [x] Para 3 sentence 1: change fourd -> four
-- [ ] Para 3 in section id "about": Change "The organizers are still working out the final schedule, but some of the topics are listed below." to "A preliminary list of workshop topics to expect can be found below." [NB: We don't really need to tell them the exact order until January honestly, since we state that we expect participation on all four days anyway.]
-- [ ] Para 3 last sentence: Strike and change to "Continue to watch this site during December and January for additional information regarding instructors, a workshop schedule, and more."
-- [ ] We should probably have a line at the end about the application process: "Applications require only a short statement of interest, and will be considered on a rolling basis. We advise applicants to apply early to secure a spot. Please direct questions and inquiries to gc.digitalfellows@gmail.com."
-- [ ] There's something wonky going on in the topics container... the bottom 2 rows of boxes are bumping to the left and nothing populates the third column. (this is an issue with bootstrap 4 and browser positioning of column items. not easy to fix)
+- [x] Para 3 in section id "about": Change "The organizers are still working out the final schedule, but some of the topics are listed below." to "A preliminary list of workshop topics to expect can be found below." [NB: We don't really need to tell them the exact order until January honestly, since we state that we expect participation on all four days anyway.]
+- [x] Para 3 last sentence: Strike and change to "Continue to watch this site during December and January for additional information regarding instructors, a workshop schedule, and more."
+- [x] We should probably have a line at the end about the application process: "Applications require only a short statement of interest, and will be considered on a rolling basis. We advise applicants to apply early to secure a spot. Please direct questions and inquiries to gc.digitalfellows@gmail.com."
+- [x] There's something wonky going on in the topics container... the bottom 2 rows of boxes are bumping to the left and nothing populates the third column. (this is an issue with bootstrap 4 and browser positioning of column items. not easy to fix)
 - [x] On the application, the "Other (specify):" box for "which workshops may be of interest" doesn't have a text entry area. (there is a box that only appears if "other" is checked, but looks like the javascript broke during application updates)
 - [x] For the "Do you have a laptop" question, please add in the Note: "Having a laptop is not required."
 - [x] Similarly, under the "what operating systems" question, please also add to the note "Acceptance is not contingent on familiarity with a particular operating system."
