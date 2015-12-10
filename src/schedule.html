@@ -5,9 +5,9 @@ permalink: /schedule/
 regenerate: true
 ---
 
-<section id="content" class="container">
+<section id="content" class="container-fluid">
   <div class="row">
-    <div class="col-xl-10 col-offset-xl-1">
+    <div class="col-lg-10 col-lg-offset-1">
       <p>Each day of the Bootcamp, there will be four workshop sessions--two in the
       morning and two in the afternoon, with breaks between each session. Workshop
       topics are scaffolded so that successive workshops will use skills developed
@@ -24,7 +24,7 @@ regenerate: true
           <th class="hidden-xs-down">Session</th>
           <th>Topic</th>
           <th>Room</th>
-          <th class="hidden-xs-down">Instructor</th>
+          <th class="hidden-xs-down">Instructor(s)</th>
           <th class="hidden-xs-down">Materials</th>
         </thead>
         {% for timeslot in day.timeslots %}
@@ -43,7 +43,8 @@ regenerate: true
           <td class="hidden-xs-down">{{timeslot.session}}</td>
           <td><a href="{{site.baseurl}}/workshops/#{{timeslot.link}}">{{timeslot.title}}</a></td>
           {% else %}
-          <td colspan=2>{{timeslot.session}}</td>
+          <td></td>
+          <td>{{timeslot.title}}</td>
           {% endif %}
           <td><a href="{{site.baseurl}}/rooms/#{{timeslot.room}}">{{site.data.rooms[timeslot.room].title}}</a></td>
           <td class="hidden-xs-down">{{timeslot.instructor}}</td>

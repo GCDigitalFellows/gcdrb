@@ -2,261 +2,268 @@
   date: 'Tuesday, January 18, 2016'
   timeslots:
     - time: '9:30 - 10:00'
-      session: Coffee
+      title: Coffee
       room: sc
       track: 0
     - time: '10:00 - 11:30'
       session: '1'
       title: Command Line 1
       room: sc
-      instructor: test1
+      instructor: Software Carpentry
       link: terminal
       track: 1
     - time: '11:15 - 11:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '11:30 - 12:45'
       session: '2'
       title: Command Line 2
       room: sc
-      instructor: test2
+      instructor: Software Carpentry
       link: terminal
       track: 1
     - time: '12:45 - 2:00'
-      session: Lunch + Presentations
+      title: Lunch + Presentations
       room: ''
       track: 0
     - time: '2:00 - 3:15'
       session: '3'
       title: Git 1
       room: sc
-      instructor: ''
+      instructor: Software Carpentry
       link: git
       track: 1
     - time: '3:15 - 3:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '3:30 - 4:45'
       session: '4'
       title: Git 2
       room: sc
-      instructor: ''
+      instructor: Software Carpentry
       link: git
       track: 1
     - time: '4:45 - 6:00'
-      session: Office Hours
+      title: Office Hours
       room: ''
       track: 0
     - time: ''
-      session: ''
+      title: ''
       room: ''
       track: 0
 - day: Day 2
   date: 'Wednesday, January 19, 2016'
   timeslots:
     - time: '9:30 - 10:00'
-      session: Coffee
+      title: Coffee
       room: sc
       track: 0
     - time: '10:00 - 11:30'
       session: '5'
       title: Python 1
       room: sc
-      instructor: ''
+      instructor: Software Carpentry
       link: python
       track: 1
     - time: '11:15 - 11:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '11:30 - 12:45'
       session: '6'
       title: Python 2
       room: sc
-      instructor: ''
+      instructor: Software Carpentry
       link: python
       track: 1
     - time: '12:45 - 2:00'
-      session: Lunch + Presentations
+      title: Lunch + Presentations
       room: ''
       track: 0
     - time: '2:00 - 3:15'
       session: '7'
       title: Databases 1
       room: sc
-      instructor: ''
+      instructor: Software Carpentry
       link: databases
       track: 1
     - time: '3:15 - 3:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '3:30 - 4:45'
       session: '8'
       title: Databases 2
       room: sc
-      instructor: ''
+      instructor: Software Carpentry
       link: databases
       track: 1
     - time: '4:45 - 6:00'
-      session: Office Hours
+      title: Office Hours
       room: ''
       track: 0
     - time: ''
-      session: ''
+      title: ''
       room: ''
       track: 0
 - day: Day 3
   date: 'Thursday, January 20, 2016'
   timeslots:
     - time: '9:30 - 10:00'
-      session: Coffee
+      title: Coffee
       room: sc
       track: 0
     - time: '10:00 - 11:30'
       session: '9'
       title: Data Cleaning 1
       room: ml
-      instructor: ''
+      instructor: Evan Misshula
       link: data
       track: 1
     - time: '11:15 - 11:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '11:30 - 12:45'
       session: '10'
-      title: Data Cleaning 2
+      title: Twitter API
       room: ml
-      instructor: ''
+      instructor: 'Michelle Johnson McSweeney, Patrick Smyth'
       link: data
       track: 1
+    - time: '11:30 - 12:45'
+      session: '10'
+      title: Data Formats
+      room: sc
+      instructor: Evan Misshula
+      link: ''
+      track: 2
     - time: '12:45 - 2:00'
-      session: Lunch + Presentations
+      title: Lunch + Presentations
       room: sc
       track: 0
     - time: '2:00 - 3:15'
       session: '11'
       title: NLTK 1
       room: sc
-      instructor: ''
+      instructor: 'Patrick Smyth, Michelle Johnson McSweeney'
       link: nltk
       track: 1
     - time: '2:00 - 3:15'
       session: '11'
       title: NumPy/SciPy 2
       room: ml
-      instructor: ''
+      instructor: Hannah Aizenman
       link: scipy
       track: 2
     - time: '3:15 - 3:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '3:30 - 4:45'
       session: '12'
       title: NLTK 2
       room: sc
-      instructor: ''
+      instructor: 'Patrick Smyth, Michelle Johnson McSweeney'
       link: nltk
       track: 1
     - time: '3:30 - 4:45'
       session: '12'
       title: NumPy/SciPy 2
       room: ml
-      instructor: ''
+      instructor: Hannah Aizenman
       link: scipy
       track: 2
     - time: '4:45 - 6:00'
-      session: Office Hours
+      title: Office Hours
       room: ''
       track: 0
     - time: ''
-      session: ''
+      title: ''
       room: ''
       track: 0
 - day: Day 4
   date: 'Friday, January 21, 2016'
   timeslots:
     - time: '9:30 - 10:00'
-      session: Coffee
+      title: Coffee
       room: sc
       track: 0
     - time: '10:00 - 11:30'
       session: '13'
       title: Machine Learning
-      room: ''
-      instructor: ''
+      room: ml
+      instructor: Dennis Tenen
       link: ml
       track: 1
     - time: '10:00 - 11:30'
       session: '13'
       title: Digital Identity/Wordpress
-      room: ''
-      instructor: ''
+      room: sc
+      instructor: 'Mary Catherine Kinniburgh, Patrick Sweeney'
       link: identity
       track: 2
     - time: '11:15 - 11:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '11:30 - 12:45'
       session: '14'
       title: Big Data Management/Hadoop
-      room: ''
-      instructor: ''
+      room: ml
+      instructor: Dennis Tenen
       link: bigdata
       track: 1
     - time: '11:30 - 12:45'
       session: '14'
       title: HTML/CSS/JS
-      room: ''
-      instructor: ''
+      room: sc
+      instructor: Ian Phillips
       link: html
       track: 2
     - time: '12:45 - 2:00'
-      session: Lunch + Presentations
+      title: Lunch + Presentations
       room: sc
       track: 0
     - time: '2:00 - 3:15'
       session: '15'
       title: Data Visualization (Programmatic) 1
-      room: ''
-      instructor: ''
+      room: ml
+      instructor: George
       link: viza
       track: 1
     - time: '2:00 - 3:15'
       session: '15'
       title: Data Visualization (WYSIWYG) 2
-      room: ''
-      instructor: ''
+      room: sc
+      instructor: Micki Kaufman
       link: vizb
       track: 2
     - time: '3:15 - 3:30'
-      session: Break
+      title: Break
       room: ''
       track: 0
     - time: '3:30 - 4:45'
       session: '16'
       title: Data Visualization (Programmatic) 2
-      room: ''
-      instructor: ''
+      room: ml
+      instructor: George
       link: viza
       track: 1
     - time: '3:30 - 4:45'
       session: '16'
       title: Data Visualization (WYSIWYG) 2
-      room: ''
-      instructor: ''
+      room: sc
+      instructor: Micki Kaufman
       link: vizb
       track: 2
     - time: '4:45 - 6:00'
-      session: Presentations
-      room: ''
+      title: Presentations
+      room: sc
       track: 0
     - time: '6:00 - 8:00'
-      session: Reception
-      room: ''
+      title: Reception
+      room: sc
       track: 0
