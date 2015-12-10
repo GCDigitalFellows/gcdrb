@@ -4,10 +4,13 @@
       <span class="sr-only">Toggle navigation</span>
       <i class="fa fa-bars"></i>
     </button>
-    <a class="navbar-brand page-scroll pull-left" href="#page-top" title="{{ site.description }}">
+    <a class="navbar-brand page-scroll pull-left hidden-xs-down" href="#page-top" title="{{ site.description }}">
       <img class="site-logo" src="{{site.baseurl}}/assets/images/gcdrb-logo.png" alt="{{ site.title }}">
     </a>
-    
+    <a class="navbar-brand page-scroll pull-left hidden-sm-up" href="#page-top" title="{{ site.description }}">
+      <img class="site-logo" src="{{site.baseurl}}/assets/images/gcdrb-logo-mobile.png" alt="{{ site.title }}">
+    </a>
+
     <div class="collapse navbar-toggleable-sm pull-right" id="bs-navbar-collapse-1" aria-expanded="false">
       <ul class="nav navbar-nav">
       {% include nav-menu.html menu=include.menu %}

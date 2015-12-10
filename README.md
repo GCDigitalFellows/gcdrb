@@ -3,11 +3,11 @@
 ##To-Dos
 
 - [x] Add "success" page after application is submitted
-- [ ] Fix responsive header and footer
-  - [ ] Header disappears on mobile
-  - [ ] Footer is all over the place (probably related to body positioning css)
+- [x] Fix responsive header and footer
+  - [x] Header disappears on mobile
+  - [x] Footer is all over the place (probably related to body positioning css)
 - [ ] Header/menu on mobile...
-  - [ ] Move logo outside of the collapsable menu
+  - [x] Move logo outside of the collapsable menu
   - [ ] Possibly redo the mobile menu so that it's a stacked list instead of horizontal on mobile
 - [x] Fix contact form on mobile
 - [x] Fix contact form email address
