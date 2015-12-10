@@ -2,7 +2,7 @@
 
 ##To-Dos
 
-- [ ] Add "success" page after application is submitted
+- [x] Add "success" page after application is submitted
 - [ ] Fix responsive header and footer
   - [ ] Header disappears on mobile
   - [ ] Footer is all over the place (probably related to body positioning css)

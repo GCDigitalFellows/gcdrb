@@ -1,8 +1,8 @@
-/* global document */
 'use strict';
 
 function postToGoogle() {
   var inputs = $('form#google-form').serializeJSON();
+  var successPage = $('form#google-form').data('success');
   console.log(inputs);
   $.ajax({
     url: 'https://docs.google.com/forms/d/109PlfwGQc0O8NaeRHKv2x3Ic3_N7wuJccApU1fm43Vc/formResponse',
@@ -24,6 +24,7 @@ function postToGoogle() {
         var msg = 'Your application submitted successfully!';
         var status = 'success';
         showAlert(msg, status);
+        window.location.href = successPage;
       }
     }
   });
