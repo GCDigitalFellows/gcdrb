@@ -3,7 +3,8 @@
 # helper confirmation function
 confirm () {
     # call with a prompt string or use a default
-    read -r -p "${1:-Are you sure? [y/N]} " response
+    echo "${1:-Are you sure? [y/N]}"
+    read response
     case $response in
         [yY][eE][sS]|[yY])
             return 0
@@ -14,8 +15,9 @@ confirm () {
     esac
 }
 
-read -e -p "Please enter the *BASE* directory where you want to clone this project (it will create a new folder called gcdrb in this location): " CLONEDIR
-cd "$CLONEDIR" || exit
+echo "Please enter the *BASE* directory where you want to clone this project (it will create a new folder called gcdrb in this location): "
+read clonedir
+cd "$clonedir" || exit
 
 # install homebrew on macs
 if [[ `uname` == 'Darwin' ]]; then
