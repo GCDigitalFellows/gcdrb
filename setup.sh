@@ -126,6 +126,9 @@ else
   fi
 fi
 
+#reload shell
+/usr/bin/env bash
+
 # install rubygems
 if ! type 'gem' > /dev/null 2>&1; then
   echo "Installing rubygems"
