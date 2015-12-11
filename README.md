@@ -22,6 +22,13 @@
 - [x] For the "Do you have a laptop" question, please add in the Note: "Having a laptop is not required."
 - [x] Similarly, under the "what operating systems" question, please also add to the note "Acceptance is not contingent on familiarity with a particular operating system."
 
+## Quick-Start
+
+Run the setup script to get your environment all set up. Should work on Linux and Mac systems. It'll install all of the dependencies and get everything all set up for you.
+```bash
+curl -L https://raw.github.com/GCDigitalFellows/gcdrb/setup.sh | bash
+```
+
 ## Prerequisites
 
 You need a few tools installed to build and run this website:
