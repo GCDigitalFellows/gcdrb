@@ -26,7 +26,7 @@
 
 Run the setup script to get your environment all set up. Should work on Linux and Mac systems. It'll install all of the dependencies and get everything all set up for you.
 ```bash
-curl -L https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup.sh | bash
+bash -c "$(curl -L https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup.sh)"
 ```
 
 ## Prerequisites
