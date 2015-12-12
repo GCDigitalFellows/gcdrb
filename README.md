@@ -24,9 +24,15 @@
 
 ## Quick-Start
 
-Run the setup script to get your environment all set up. Should work on Linux and Mac systems. It'll install all of the dependencies and get everything all set up for you.
+Run the setup scripts to get your environment all set up. Should work on Linux and Mac systems. It'll install all of the dependencies and get everything all set up for you.
+
+First run the following in a terminal:
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup.sh)"
+```
+Once the script finishes, open a new terminal and run the following:
+```bash
+bash -c "$(curl -L https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup2.sh)"
 ```
 
 ## Prerequisites
