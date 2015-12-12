@@ -200,4 +200,4 @@ else
   warning "ruby-install not found. Please double check your ruby installation to be sure everything is configured correctly. I recommend against using the system ruby just to keep things clean."
 fi
 
-warning "Finished installing the required tools. Please open a new shell and run `bash -c "$(https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup.sh)"`"
+warning "Finished installing the required tools. Please open a new shell and run `bash -c "$(curl -L https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup.sh)"`"
