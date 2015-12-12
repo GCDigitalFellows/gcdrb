@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+function confirm () {
+    # call with a prompt string or use a default
+    read -r -p "${1:-Are you sure? [y/N]} " response
+    case $response in
+        [yY][eE][sS]|[yY])
+            return 0
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
 
 # install rubygems
 if ! type 'gem' > /dev/null 2>&1; then
@@ -42,4 +54,6 @@ bower install
 log "Installing Ruby dependencies"
 bundle install
 
-log "Installation complete! Run `gulp` to build the site and view it on your local computer."
+log "Installation complete! Run 'gulp' to build the site and view it on your local computer."
+
+gulp
