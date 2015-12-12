@@ -55,5 +55,3 @@ log "Installing Ruby dependencies"
 bundle install
 
 log "Installation complete! Run 'gulp' to build the site and view it on your local computer."
-
-gulp
