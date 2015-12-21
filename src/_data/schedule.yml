@@ -2,7 +2,7 @@
   date: 'Tuesday, January 18, 2016'
   timeslots:
     - time: '9:30 - 10:00'
-      title: Coffee
+      title: 'Registration & Coffee'
       room: sc
       track: 0
     - time: '10:00 - 11:30'
@@ -171,10 +171,10 @@
       track: 1
     - time: '3:30 - 4:45'
       session: '12'
-      title: NumPy/SciPy 2
+      title: Machine Learning
       room: ml
       instructor: Hannah Aizenman
-      link: scipy
+      link: ml
       track: 2
     - time: '4:45 - 6:00'
       title: Office Hours
@@ -193,10 +193,11 @@
       track: 0
     - time: '10:00 - 11:30'
       session: '13'
-      title: Machine Learning
+      title: |
+        GIS
       room: ml
-      instructor: Dennis Tenen
-      link: ml
+      instructor: 'Michelle Johnson McSweeny & Hannah AIzenman'
+      link: gis
       track: 1
     - time: '10:00 - 11:30'
       session: '13'
@@ -211,10 +212,10 @@
       track: 0
     - time: '11:30 - 12:45'
       session: '14'
-      title: Big Data Management/Hadoop
+      title: GIS
       room: ml
-      instructor: Dennis Tenen
-      link: bigdata
+      instructor: 'Michelle Johnson McSweeny & Hannah AIzenman'
+      link: gis
       track: 1
     - time: '11:30 - 12:45'
       session: '14'
@@ -231,7 +232,7 @@
       session: '15'
       title: Data Visualization (Programmatic) 1
       room: ml
-      instructor: George
+      instructor: '??'
       link: viza
       track: 1
     - time: '2:00 - 3:15'
@@ -249,7 +250,7 @@
       session: '16'
       title: Data Visualization (Programmatic) 2
       room: ml
-      instructor: George
+      instructor: '??'
       link: viza
       track: 1
     - time: '3:30 - 4:45'

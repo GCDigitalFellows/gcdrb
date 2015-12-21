@@ -23,12 +23,13 @@ module.exports = function (request, baby, yaml, fs) {
     },
 
     people: function (done) {
+      var rows;
       request('https://docs.google.com/spreadsheets/d/16RfbdrnDHhRgP2iZwNw6AVSyWy5VoKn0nB0CpyMa658/pub?gid=1411565774&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
-            var csvData = baby.parse(body, {header: true, skipEmptyLines: true, comments: '//'});
+            rows = baby.parse(body, {header: true, skipEmptyLines: true, comments: '//'}).data;
             fs.writeFile('src/_data/people.yml',
-              yaml.dump(csvData.data),
+              yaml.dump(rows),
               function (err) {
                 if (err) {
                   return console.log(err);

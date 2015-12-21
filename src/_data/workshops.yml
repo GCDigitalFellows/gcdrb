@@ -77,13 +77,13 @@
   repo: gcdrb-digital-identity
   session: '13'
   description: Build a wordpress site to control online branding and learn about various add-ons to make the site work for you.
-- title: Big Data Management
-  link: bigdata
-  tagline: 'Manage large datasets using distributed computing tools. '
-  icon: icon-hadoop
-  repo: gcdrb-big-data
+- title: GIS
+  link: gis
+  tagline: Analyze spatial information
+  icon: fa-globe
+  repo: gcdrb-gis
   session: '14'
-  description: 'Distributed data aware data structures such as blaze and pytables, computing libraries such as disco, and remote environments such as EC2. '
+  description: 'Discussion of geographic data, the various ways of representing it, and methods for analysing and visualizing spatial data.'
 - title: Machine Learning
   link: ml
   tagline: Explore the structure of data using machine learning algorithms.

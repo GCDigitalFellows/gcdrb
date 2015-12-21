@@ -1,0 +1,20 @@
+- name: Keith Miyake
+  title: Digital Fellow
+  affiliation: Graduate Center
+  email: keith.miyake@gmail.com
+  website: 'http://keithmiyake.info'
+  twitter: ''
+  facebook: ''
+  github: kaymmm
+  bio: 'Keith is a doctoral candidate in the Earth and Environmental Sciences Program at the Graduate Center. His specializations include political geography, environmental justice, ethnic studies, urban planning, and political economy.'
+  image: 'https://drive.google.com/open?id=0BzvdhM1qke7Vd1Qyd2U1LVNOdWs'
+- name: 'Software Carpentary '
+  title: ''
+  affiliation: ''
+  email: ''
+  website: 'http://software-carpentry.org/'
+  twitter: '@swcarpentry'
+  facebook: ''
+  github: swcarpentry
+  bio: An organization that teaches basic lab skills for scientific computing so that researchers can get more done in less time and with less pain.
+  image: email admin@software-carpentry.org asking if we can use their logo

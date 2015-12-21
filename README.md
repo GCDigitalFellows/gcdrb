@@ -9,6 +9,7 @@
 - [x] Header/menu on mobile...
   - [x] Move logo outside of the collapsable menu
   - ~~[ ] Possibly redo the mobile menu so that it's a stacked list instead of horizontal on mobile~~
+- [ ] Header logo link is broken
 - [x] Fix contact form on mobile
 - [x] Fix contact form email address
 - [x] Move "apply now" button above text
