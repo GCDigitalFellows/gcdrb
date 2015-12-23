@@ -10,6 +10,7 @@ var request = require('request');
 var babyparse = require('babyparse');
 var yaml = require('js-yaml');
 var fs = require('fs');
+var spawn = require('child_process').spawn;
 
 // Delete stuff
 import del from 'del';
@@ -45,7 +46,9 @@ gulp.task('images', require('./gulp-tasks/images')(gulp, $));
 var inject = require('./gulp-tasks/inject')(gulp, $, streamSeries);
 gulp.task('inject:head', inject.head);
 gulp.task('inject:footer', inject.footer);
-gulp.task('jekyll', require('./gulp-tasks/jekyll')(gulp, shell, isProduction));
+var jekyll = require('./gulp-tasks/jekyll')(gulp, spawn, isProduction);
+gulp.task('jekyll', jekyll.build);
+gulp.task('jekyll:doctor', jekyll.doctor);
 gulp.task('rebuild', require('./gulp-tasks/rebuild')(gulp));
 var scripts = require('./gulp-tasks/scripts')(gulp, $, isProduction, browserSync);
 gulp.task('scripts', scripts.scripts);
@@ -54,12 +57,6 @@ gulp.task('serve', require('./gulp-tasks/serve')(gulp, $, browserSync));
 var styles = require('./gulp-tasks/styles')(gulp, $, isProduction, browserSync, autoprefixer);
 gulp.task('styles', styles.styles);
 gulp.task('styles:vendor', styles.vendor);
-
-// 'gulp doctor' -- literally just runs jekyll doctor
-gulp.task('jekyll:doctor', done => {
-  shell.exec('jekyll doctor');
-  done();
-});
 
 // 'gulp lint' -- check your JS for formatting errors using XO Space
 gulp.task('lint', () =>
