@@ -49,20 +49,13 @@
   repo: gcdrb-data-cleaning
   session: '9'
   description: 'Dealing with some common problems with datasets, including file types and conversions, inconsistent metadata, normalization, and working with APIs.'
-- title: Exploratory Visualization
+- title: Data Visualization
   link: viza
   tagline: 'Generate visualizations to uncover the story the data is telling. '
   icon: fa-area-chart
   repo: gcdrb-data-viz-a
   session: '15'
-  description: 'Programmatic data visualization using Python and Javascript, including basic geospatial visualization'
-- title: Information Visualization
-  link: vizb
-  tagline: Create aesthetically appealing narratives to share your results.
-  icon: fa-map
-  repo: gcdrb-data-viz-b
-  session: '15'
-  description: 'Data visualization using interactive tools, including basic mapping tools. '
+  description: 'Data visualization using either programmatic or interactive tools, including basic geospatial visualization'
 - title: NLTK
   link: nltk
   tagline: 'Process, analyze, and summarize textual data using NLTK'
