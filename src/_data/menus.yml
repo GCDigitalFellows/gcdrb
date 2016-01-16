@@ -4,6 +4,12 @@ home:
     class: page-scroll
   - name: Workshops
     href: '/workshops/'
+  - name: Schedule
+    href: '/schedule/'
+  - name: Instructors
+    href: '/instructors/'
+  - name: Partners
+    href: '/partners'
   - name: Apply
     href: '/apply/'
   - name: Contact
@@ -16,6 +22,12 @@ main:
     href: '/#about'
   - name: Workshops
     href: '/workshops/'
+  - name: Schedule
+    href: '/schedule/'
+  - name: Instructors
+    href: '/instructors/'
+  - name: Partners
+    href: '/partners'
   - name: Apply
     href: '/apply/'
   - name: Contact
@@ -27,6 +39,12 @@ footer:
     href: '/#about'
   - name: Workshops
     href: '/workshops/'
+  - name: Schedule
+    href: '/schedule/'
+  - name: Instructors
+    href: '/instructors/'
+  - name: Partners
+    href: '/partners'
   - name: Apply
     href: '/apply/'
   - name: Contact

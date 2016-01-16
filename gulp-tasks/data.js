@@ -1,20 +1,23 @@
-module.exports = function (request, baby, yaml, fs) {
+module.exports = function (request, baby, yaml, fs, escape) {
+  var docurl = 'https://docs.google.com/spreadsheets/d/16RfbdrnDHhRgP2iZwNw6AVSyWy5VoKn0nB0CpyMa658/pub?';
   return {
     workshops: function (done) {
-      request('https://docs.google.com/spreadsheets/d/16RfbdrnDHhRgP2iZwNw6AVSyWy5VoKn0nB0CpyMa658/pub?gid=585110058&single=true&output=csv',
+      var sheet = '585110058',
+          outfile = 'workshops.yml';
+      request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
-            var csvData = baby.parse(body, {header: true});
-            fs.writeFile('src/_data/workshops.yml',
-              yaml.dump(csvData.data),
+            var rows = baby.parse(body, {header: true}).data;
+            fs.writeFile('src/_data/' + outfile,
+              yaml.dump(rows),
               function (err) {
                 if (err) {
                   return console.log(err);
                 }
-                console.log('Wrote src/_data/workshops.yml');
+                console.log('Wrote src/_data/' + outfile);
               });
           } else {
-            console.log('Failed to download the workshop data from Google Docs.');
+            console.log('Failed to download the ' + outfile + ' data from Google Docs.');
             console.log('Error: ' + error);
             console.log('Response: ' + response);
           }
@@ -23,21 +26,52 @@ module.exports = function (request, baby, yaml, fs) {
     },
 
     people: function (done) {
-      var rows;
-      request('https://docs.google.com/spreadsheets/d/16RfbdrnDHhRgP2iZwNw6AVSyWy5VoKn0nB0CpyMa658/pub?gid=1411565774&single=true&output=csv',
+      var rows,
+          sheet = '1411565774',
+          outfile = 'people.yml';
+      request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
             rows = baby.parse(body, {header: true, skipEmptyLines: true, comments: '//'}).data;
-            fs.writeFile('src/_data/people.yml',
+            for (var c = 0; c < rows.length; c++) {
+              rows[c].bio = '<p>' + escape(rows[c].bio) + '</p>';
+              rows[c].bio = rows[c].bio.replace(/(\n)/g, '</p><p>');
+            };
+            fs.writeFile('src/_data/' + outfile,
               yaml.dump(rows),
               function (err) {
                 if (err) {
                   return console.log(err);
                 }
-                console.log('Wrote src/_data/people.yml');
+                console.log('Wrote src/_data/' + outfile);
               });
           } else {
-            console.log('Failed to download the workshop data from Google Docs.');
+            console.log('Failed to download the ' + outfile + ' data from Google Docs.');
+            console.log('Error: ' + error);
+            console.log('Response: ' + response);
+          }
+        });
+      done();
+    },
+
+    partners: function (done) {
+      var rows,
+          sheet = '2001419383',
+          outfile = 'partners.yml';
+      request(docurl + 'gid=' + sheet + '&single=true&output=csv',
+        function (error, response, body) {
+          if (!error && response.statusCode === 200) {
+            rows = baby.parse(body, {header: true, skipEmptyLines: true, comments: '//'}).data;
+            fs.writeFile('src/_data/' + outfile,
+              yaml.dump(rows),
+              function (err) {
+                if (err) {
+                  return console.log(err);
+                }
+                console.log('Wrote src/_data/' + outfile);
+              });
+          } else {
+            console.log('Failed to download the ' + outfile + ' data from Google Docs.');
             console.log('Error: ' + error);
             console.log('Response: ' + response);
           }
@@ -46,11 +80,12 @@ module.exports = function (request, baby, yaml, fs) {
     },
 
     schedule: function (done) {
-      request('https://docs.google.com/spreadsheets/d/16RfbdrnDHhRgP2iZwNw6AVSyWy5VoKn0nB0CpyMa658/pub?gid=0&single=true&output=csv',
+      var sheet = '0',
+          outfile = 'schedule.yml';
+      request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
-            var csvData = baby.parse(body, {header: true, skipEmptyLines: true});
-            var rows = csvData.data;
+            var rows = baby.parse(body, {header: true, skipEmptyLines: true}).data;
             var outData = [];
             for (var i = 0; i < rows.length; i++) {
               var row = rows[i];
@@ -79,7 +114,7 @@ module.exports = function (request, baby, yaml, fs) {
                     track: 2
                   });
                 }
-                if (!row.Session) {
+                if (!row.Session && row.Time) {
                   outData[outData.length - 1].timeslots.push({
                     time: row.Time,
                     title: row.Track1,
@@ -90,16 +125,16 @@ module.exports = function (request, baby, yaml, fs) {
               }
             }
 
-            fs.writeFile('src/_data/schedule.yml',
+            fs.writeFile('src/_data/' + outfile,
               yaml.dump(outData),
               function (err) {
                 if (err) {
                   return console.log(err);
                 }
-                console.log('Wrote src/_data/schedule.yml');
+                console.log('Wrote src/_data/' + outfile);
               });
           } else {
-            console.log('Failed to download the schedule data from Google Docs.');
+            console.log('Failed to download the ' + outfile + ' data from Google Docs.');
             console.log('Error: ' + error);
             console.log('Response: ' + response);
           }

@@ -3,6 +3,7 @@
   tagline: Complete complex tasks with just a few keystrokes.
   icon: fa-terminal
   repo: gcdrb-command-line
+  more_info_link: 'http://swcarpentry.github.io/shell-novice/'
   session: '1'
   description: 'Introduction to the UNIX command line. Topics covered will include the filesystem, environment, useful commands, working with files and folders, input and output using pipes and simple command line programs.'
 - title: Git
@@ -10,6 +11,7 @@
   tagline: Simplify collaboration using version control systems.
   icon: fa-code-fork
   repo: gcdrb-git
+  more_info_link: 'http://swcarpentry.github.io/git-novice/'
   session: '3'
   description: 'Git is a tool for managing changes to a set of files. It allows users to store new changes, recover old versions reliably, and helps manage conflicting changes made by different users.'
 - title: Python
@@ -18,6 +20,7 @@
     Use Python for everything from data analysis to building websites.
   icon: icon-python
   repo: gcdrb-python
+  more_info_link: 'http://swcarpentry.github.io/python-novice-inflammation/'
   session: '5'
   description: 'Python is a programming language that can be used for a wide range of tasks, from collecting data to analysis to building web applications.'
 - title: Databases
@@ -25,6 +28,7 @@
   tagline: Seamlessly integrate data management into digital research.
   icon: fa-database
   repo: gcdrb-databases
+  more_info_link: ''
   session: '7'
   description: 'Store complex data using databases and manipulating, analyzing, and searching databases using SQL.'
 - title: Scientific Python
@@ -32,6 +36,7 @@
   tagline: 'Analyse and manage data using scientific computing libraries. '
   icon: fa-flask
   repo: gcdrb-scipy
+  more_info_link: ''
   session: '11'
   description: 'Manage and analyse tabular data using Pandas, and work with N-dimensional array data using numpy and scipy.  '
 - title: HTML/CSS/Javascript
@@ -39,6 +44,7 @@
   tagline: Share your research using web development fundamentals.
   icon: icon-html
   repo: gcdrb-html
+  more_info_link: ''
   session: '14'
   description: 'Implement a modern website that uses HTML for content, CSS to control appearance, and JavaScript to dictate behavior. '
 - title: Data Cleaning
@@ -47,6 +53,7 @@
     Build a robust dataset using data cleaning best practices.
   icon: fa-tasks
   repo: gcdrb-data-cleaning
+  more_info_link: ''
   session: '9'
   description: 'Dealing with some common problems with datasets, including file types and conversions, inconsistent metadata, normalization, and working with APIs.'
 - title: Data Visualization
@@ -54,6 +61,7 @@
   tagline: 'Generate visualizations to uncover the story the data is telling. '
   icon: fa-area-chart
   repo: gcdrb-data-viz-a
+  more_info_link: ''
   session: '15'
   description: 'Data visualization using either programmatic or interactive tools, including basic geospatial visualization'
 - title: NLTK
@@ -61,6 +69,7 @@
   tagline: 'Process, analyze, and summarize textual data using NLTK'
   icon: fa-book
   repo: gcdrb-nltk
+  more_info_link: ''
   session: '11'
   description: 'NLTK supports classification, tokenization, stemming, tagging, parsing, and semantic reasoning, and has easy-to-use interfaces to corpora and lexical resources.'
 - title: Digital Identity/Wordpress
@@ -68,6 +77,7 @@
   tagline: Gain some control over how people encounter research on the web.
   icon: fa-users
   repo: gcdrb-digital-identity
+  more_info_link: ''
   session: '13'
   description: Build a wordpress site to control online branding and learn about various add-ons to make the site work for you.
 - title: GIS
@@ -75,6 +85,7 @@
   tagline: Analyze spatial information
   icon: fa-globe
   repo: gcdrb-gis
+  more_info_link: ''
   session: '14'
   description: 'Discussion of geographic data, the various ways of representing it, and methods for analysing and visualizing spatial data.'
 - title: Machine Learning
@@ -82,5 +93,6 @@
   tagline: Explore the structure of data using machine learning algorithms.
   icon: fa-magic
   repo: gcdrb-machine-learning
+  more_info_link: ''
   session: '13'
   description: 'Regression analysis, data preprocessing, model selection, supervised and unsupervised machine learning and dimension reduction using the sklearn machine learning library. '

@@ -11,6 +11,7 @@ var babyparse = require('babyparse');
 var yaml = require('js-yaml');
 var fs = require('fs');
 var spawn = require('child_process').spawn;
+var escape = require('escape-html');
 
 // Delete stuff
 import del from 'del';
@@ -31,11 +32,12 @@ gulp.task('clean:assets', clean.assets);
 gulp.task('clean:dist', clean.dist);
 gulp.task('clean:gzip', clean.gzip);
 gulp.task('clean:metadata', clean.metadata);
-var getData = require('./gulp-tasks/data')(request, babyparse, yaml, fs);
+var getData = require('./gulp-tasks/data')(request, babyparse, yaml, fs, escape);
 gulp.task('data:people', getData.people);
 gulp.task('data:schedule', getData.schedule);
 gulp.task('data:workshops', getData.workshops);
-gulp.task('data', gulp.parallel('data:schedule', 'data:workshops', 'data:people'));
+gulp.task('data:partners', getData.partners);
+gulp.task('data', gulp.parallel('data:schedule', 'data:workshops', 'data:people', 'data:partners'));
 var deploy = require('./gulp-tasks/deploy')(gulp);
 gulp.task('deploy:cname', deploy.cname);
 gulp.task('deploy:push', deploy.push);
