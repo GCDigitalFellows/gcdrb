@@ -10,8 +10,6 @@ home:
     href: '/instructors/'
   - name: Partners
     href: '/partners'
-  - name: Apply
-    href: '/apply/'
   - name: Contact
     href: '#contact'
     class: page-scroll
@@ -28,8 +26,6 @@ main:
     href: '/instructors/'
   - name: Partners
     href: '/partners'
-  - name: Apply
-    href: '/apply/'
   - name: Contact
     href: '/#contact'
 footer:
@@ -45,7 +41,5 @@ footer:
     href: '/instructors/'
   - name: Partners
     href: '/partners'
-  - name: Apply
-    href: '/apply/'
   - name: Contact
     href: '/#contact'
