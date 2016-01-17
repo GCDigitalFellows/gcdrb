@@ -1,4 +1,5 @@
 - name: 'Software Carpentary '
+  fullname: Software Carpentry
   email: ''
   website: 'http://software-carpentry.org/'
   twitter: '@swcarpentry'
@@ -7,6 +8,7 @@
   description: An organization that teaches basic lab skills for scientific computing so that researchers can get more done in less time and with less pain.
   image: sc.png
 - name: HILT
+  fullname: ''
   email: ''
   website: ''
   twitter: ''
@@ -15,6 +17,7 @@
   description: ''
   image: hilt.png
 - name: DHSI
+  fullname: ''
   email: ''
   website: ''
   twitter: ''
@@ -23,6 +26,7 @@
   description: ''
   image: dhsi.gif
 - name: NYPL
+  fullname: New York Public Library
   email: ''
   website: ''
   twitter: ''
@@ -31,6 +35,7 @@
   description: ''
   image: nypl.gif
 - name: ETCL
+  fullname: ''
   email: ''
   website: ''
   twitter: ''

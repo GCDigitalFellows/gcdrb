@@ -12,6 +12,7 @@
       instructor: Software Carpentry
       link: terminal
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '11:15 - 11:30'
       title: Break
       room: ''
@@ -23,9 +24,10 @@
       instructor: Software Carpentry
       link: terminal
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '12:45 - 2:00'
       title: Lunch + Introductions
-      room: ''
+      room: sc
       track: 0
     - time: '2:00 - 3:15'
       session: '3'
@@ -34,6 +36,7 @@
       instructor: Software Carpentry
       link: git
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '3:15 - 3:30'
       title: Break
       room: ''
@@ -45,9 +48,10 @@
       instructor: Software Carpentry
       link: git
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '4:45 - 6:00'
       title: Office Hours
-      room: ''
+      room: sc
       track: 0
 - day: Day 2
   date: 'Wednesday, January 19, 2016'
@@ -63,6 +67,7 @@
       instructor: Software Carpentry
       link: python
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '11:15 - 11:30'
       title: Break
       room: ''
@@ -74,9 +79,10 @@
       instructor: Software Carpentry
       link: python
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '12:45 - 2:00'
       title: Lunch
-      room: ''
+      room: sc
       track: 0
     - time: '2:00 - 3:15'
       session: '7'
@@ -85,6 +91,7 @@
       instructor: Software Carpentry
       link: databases
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '3:15 - 3:30'
       title: Break
       room: ''
@@ -96,9 +103,10 @@
       instructor: Software Carpentry
       link: databases
       track: 1
+      instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '4:45 - 6:00'
       title: Office Hours
-      room: ''
+      room: sc
       track: 0
 - day: Day 3
   date: 'Thursday, January 20, 2016'
@@ -110,10 +118,11 @@
     - time: '10:00 - 11:15'
       session: '9'
       title: Data Cleaning 1
-      room: ml
+      room: '4419'
       instructor: Evan Misshula
       link: data
       track: 1
+      instructorlink: '<a href="/instructors/#evan-misshula">Evan Misshula</a>'
     - time: '11:15 - 11:30'
       title: Break
       room: ''
@@ -121,17 +130,19 @@
     - time: '11:30 - 12:45'
       session: '10'
       title: Twitter API
-      room: ml
-      instructor: Stephen Z./Patrick Sm.
+      room: '4419'
+      instructor: 'Stephen Zweibel, Patrick Smyth'
       link: data
       track: 1
+      instructorlink: '<a href="/instructors/#stephen-zweibel">Stephen Zweibel</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '11:30 - 12:45'
       session: '10'
       title: Data Formats
-      room: sc
+      room: '4422'
       instructor: Evan Misshula
       link: ''
       track: 2
+      instructorlink: '<a href="/instructors/#stephen-zweibel">Stephen Zweibel</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '12:45 - 2:00'
       title: Lunch
       room: sc
@@ -139,17 +150,19 @@
     - time: '2:00 - 3:15'
       session: '11'
       title: NLTK 1
-      room: sc
-      instructor: 'Michelle Johnson McSweeney, Patrick Sm'
+      room: '4419'
+      instructor: 'Michelle Johnson McSweeney, Patrick Smyth'
       link: nltk
       track: 1
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '2:00 - 3:15'
       session: '11'
       title: NumPy/SciPy 2
-      room: ml
+      room: '4422'
       instructor: Hannah Aizenman
       link: scipy
       track: 2
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '3:15 - 3:30'
       title: Break
       room: ''
@@ -157,20 +170,22 @@
     - time: '3:30 - 4:45'
       session: '12'
       title: NLTK 2
-      room: sc
+      room: '4419'
       instructor: 'Michelle Johnson McSweeney, Patrick Smyth'
       link: nltk
       track: 1
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '3:30 - 4:45'
       session: '12'
       title: Machine Learning
-      room: ml
+      room: '4422'
       instructor: Hannah Aizenman
       link: ml
       track: 2
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '4:45 - 6:00'
       title: Office Hours
-      room: ''
+      room: sc
       track: 0
 - day: Day 4
   date: 'Friday, January 21, 2016'
@@ -183,17 +198,19 @@
       session: '13'
       title: |
         GIS
-      room: ml
-      instructor: 'Michelle Johnson McSweeny & Hannah AIzenman'
+      room: '4419'
+      instructor: 'Michelle Johnson McSweeney, Hannah AIzenman'
       link: gis
       track: 1
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
     - time: '10:00 - 11:15'
       session: '13'
       title: Digital Identity/Wordpress
-      room: sc
+      room: '4422'
       instructor: 'Mary Catherine Kinniburgh, Patrick Sweeney'
       link: identity
       track: 2
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
     - time: '11:15 - 11:30'
       title: Break
       room: ''
@@ -201,17 +218,19 @@
     - time: '11:30 - 12:45'
       session: '14'
       title: GIS
-      room: ml
-      instructor: 'Michelle Johnson McSweeny & Hannah AIzenman'
+      room: '4419'
+      instructor: 'Michelle Johnson McSweeney, Hannah AIzenman'
       link: gis
       track: 1
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
     - time: '11:30 - 12:45'
       session: '14'
       title: HTML/CSS/JS
-      room: sc
+      room: '4422'
       instructor: Ian Phillips
       link: html
       track: 2
+      instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
     - time: '12:45 - 2:00'
       title: Lunch
       room: sc
@@ -219,17 +238,19 @@
     - time: '2:00 - 3:15'
       session: '15'
       title: Data Visualization (Programmatic) 1
-      room: ml
+      room: '4419'
       instructor: Micki Kaufman
       link: viza
       track: 1
+      instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
     - time: '2:00 - 3:15'
       session: '15'
       title: Data Visualization (WYSIWYG) 2
-      room: sc
+      room: '4422'
       instructor: Micki Kaufman
       link: viza
       track: 2
+      instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
     - time: '3:15 - 3:30'
       title: Break
       room: ''
@@ -237,17 +258,19 @@
     - time: '3:30 - 4:45'
       session: '16'
       title: Data Visualization (Programmatic) 2
-      room: ml
+      room: '4419'
       instructor: Micki Kaufman
       link: viza
       track: 1
+      instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
     - time: '3:30 - 4:45'
       session: '16'
       title: Data Visualization (WYSIWYG) 2
-      room: sc
+      room: '4422'
       instructor: Micki Kaufman
       link: viza
       track: 2
+      instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
     - time: '4:45 - 6:00'
       title: GCDI Community Plenary
       room: sc

@@ -1,6 +1,12 @@
+'4419':
+  name: Room 4419
+  capacity: '17'
+  location: 'Fourth floor, southeast corner'
+'4422':
+  name: Room 4422
+  capacity: '22'
+  location: 'Fourth floor, southeast corner'
 sc:
-  title: Science Center
-  number: 4102
-ml:
-  title: MALS Conference Room
-  number: 4108
+  name: Science Center
+  capacity: '65'
+  location: "Fourth floor, Room 4102, southeast side of elevators, across from the Men's Restroom"
