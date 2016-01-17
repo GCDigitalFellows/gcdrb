@@ -6,8 +6,8 @@ regenerate: true
 ---
 
 <section id="content" class="container-fluid">
-  <div class="row">
-    <div class="col-lg-10 col-lg-offset-1">
+  <div class="row m-b-3">
+    <div class="col-md-8 col-md-offset-2">
       <p>Each day of the Bootcamp, there will be four workshop sessions--two in the
       morning and two in the afternoon, with breaks between each session. Workshop
       topics are scaffolded so that successive workshops will use skills developed
@@ -16,10 +16,14 @@ regenerate: true
       workshops. The following table lists all of the topics that will be covered
       over the course of the Bootcamp, with links to additional information, workshop
       materials, and the schedule.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
       <table class="table table-striped">
         <thead class="thead-inverse">
           <th>Time</th>
-          <th class="hidden-xs-down">Session</th>
+          <th class="hidden-md-down">Session</th>
           <th>Topic</th>
           <th>Room</th>
           <th class="hidden-xs-down">Instructor(s)</th>
@@ -42,14 +46,15 @@ regenerate: true
           <td>{{timeslot.time}}</td>
         {% endif %}
         {% if timeslot.track != 0 %}
-          <td class="hidden-xs-down">{{timeslot.session}}</td>
+          <td class="hidden-md-down">{{timeslot.session}}</td>
           <td><a href="{{site.baseurl}}/workshops/#{{timeslot.link}}">{{timeslot.title}}</a></td>
         {% else %}
-          <td></td>
+          <td class="hidden-md-down"></td>
           <td>{{timeslot.title}}</td>
         {% endif %}
-          <td><a href="{{site.baseurl}}/rooms/#{{timeslot.room}}">{{site.data.rooms[timeslot.room].title}}</a></td>
-          <td class="hidden-xs-down">{{timeslot.instructor}}</td>
+        <td><a
+              href="{{site.baseurl}}/rooms/#{{timeslot.room}}">{{site.data.rooms[timeslot.room].name}}</a></td>
+          <td class="hidden-xs-down">{{timeslot.instructorlink}}</td>
           {% comment %} {% if timeslot.track != 0 %}
           <td class="hidden-xs-down"><a href="{{timeslot.repo}}">repo</a></td>
         {% else %}
