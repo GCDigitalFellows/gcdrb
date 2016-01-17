@@ -106,11 +106,23 @@ aside {
   }
 }
 
+@include media-breakpoint-down(md) {
+  .navbar-nav .nav-item {
+    float: none;
+    margin-right: 1rem;
+    text-align: right;
+  }
+
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0;
+  }
+}
+
 .nav > li {
   > a,
   > a:focus {
     color: $theme-dark;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
 
@@ -137,7 +149,7 @@ aside {
     min-height: 3.5rem;
 
     .navbar-brand {
-      margin-right: 1rem;
+      margin-right: 0;
     }
   }
 
@@ -156,7 +168,7 @@ aside {
 
     .navbar-header .navbar-brand {
       color: $theme-primary;
-      font-size: 14px;
+      font-size: 12px;
 
       &:hover,
       &:focus {
@@ -237,8 +249,8 @@ header {
   .header-content {
     padding: 0 50px;
     position: absolute;
-    top: 51%;
-    transform: translateY(-50%);
+    top: 60%;
+    transform: translateY(-60%);
 
     .header-content-inner {
       margin-left: auto;
