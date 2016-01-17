@@ -36,7 +36,8 @@ module.exports = function (request, baby, yaml, fs, escape) {
             for (var c = 0; c < rows.length; c++) {
               rows[c].bio = '<p>' + escape(rows[c].bio) + '</p>';
               rows[c].bio = rows[c].bio.replace(/(\n)/g, '</p><p>');
-            };
+              rows[c].id = rows[c].name.replace(/\s/g, "-").toLowerCase();
+            }
             fs.writeFile('src/_data/' + outfile,
               yaml.dump(rows),
               function (err) {
@@ -79,6 +80,41 @@ module.exports = function (request, baby, yaml, fs, escape) {
       done();
     },
 
+    rooms: function (done) {
+      var rows,
+          sheet = '1809179717',
+          outfile = 'rooms.yml',
+          outData = {};
+      request(docurl + 'gid=' + sheet + '&single=true&output=csv',
+        function (error, response, body) {
+          if (!error && response.statusCode === 200) {
+            rows = baby.parse(body, {header: true, skipEmptyLines: true, comments: '//'}).data;
+            for (var i = 0; i < rows.length; i++) {
+              var row = rows[i];
+              outData[row.short] = {
+                  name: row.long,
+                  capacity: row.capacity,
+                  location: row.location
+                };
+            }
+            fs.writeFile('src/_data/' + outfile,
+              yaml.dump(outData),
+              // yaml.dump(rows),
+              function (err) {
+                if (err) {
+                  return console.log(err);
+                }
+                console.log('Wrote src/_data/' + outfile);
+              });
+          } else {
+            console.log('Failed to download the ' + outfile + ' data from Google Docs.');
+            console.log('Error: ' + error);
+            console.log('Response: ' + response);
+          }
+        });
+      done();
+    },
+
     schedule: function (done) {
       var sheet = '0',
           outfile = 'schedule.yml';
@@ -100,7 +136,8 @@ module.exports = function (request, baby, yaml, fs, escape) {
                     room: row.Room,
                     instructor: row.InstructorsTrack1,
                     link: row.link1,
-                    track: 1
+                    track: 1,
+                    instructorlink: linkFromNames(row.InstructorsTrack1)
                   });
                 }
                 if (row.Track2 && row.Session) {
@@ -111,7 +148,8 @@ module.exports = function (request, baby, yaml, fs, escape) {
                     room: row.Room2,
                     instructor: row.InstructorsTrack2,
                     link: row.link2,
-                    track: 2
+                    track: 2,
+                    instructorlink: linkFromNames(row.InstructorsTrack1)
                   });
                 }
                 if (!row.Session && row.Time) {
@@ -143,3 +181,18 @@ module.exports = function (request, baby, yaml, fs, escape) {
     }
   };
 };
+
+function linkFromNames(names) {
+  var nameList = names.split(",");
+  var links = "";
+  for (var c = 0; c < nameList.length; c++) {
+    var name = nameList[c].trim();
+    if (links !== "") {
+      links += ", ";
+    }
+    links += "<a href=\"/instructors/#";
+    name = name.replace(/\s/g, "-").toLowerCase();
+    links += name + "\">" + nameList[c].trim() + "</a>";
+  }
+  return links;
+}
