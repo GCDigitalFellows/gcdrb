@@ -48,7 +48,8 @@ headerclass: home
     </div>
   </div>
   <div class="row">
-    {% for topic in site.data.workshops %}
+    {% assign sorted = site.data.workshops | sort: 'sort' %}
+    {% for topic in sorted %}
     <div class="col-sm-6 col-md-4 col-xl-3">
       <div class="card card-block text-center">
         <span class="fa-stack fa-2x wow bounceIn text-info">
