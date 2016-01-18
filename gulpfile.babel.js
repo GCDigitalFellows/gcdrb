@@ -27,11 +27,11 @@ import {argv} from 'yargs';
 var isProduction = ((argv._.indexOf('deploy') > -1) || (argv._.indexOf('stage') > -1) ? true : argv.prod);
 
 var clean = require('./gulp-tasks/clean')(gulp, del);
-gulp.task('clean', clean.cleanall);
 gulp.task('clean:assets', clean.assets);
 gulp.task('clean:dist', clean.dist);
 gulp.task('clean:gzip', clean.gzip);
 gulp.task('clean:metadata', clean.metadata);
+gulp.task('clean', gulp.parallel('clean:assets', 'clean:dist', 'clean:gzip', 'clean:metadata'));
 var getData = require('./gulp-tasks/data')(request, babyparse, yaml, fs, escape);
 gulp.task('data:people', getData.people);
 gulp.task('data:schedule', getData.schedule);
@@ -43,8 +43,6 @@ var deploy = require('./gulp-tasks/deploy')(gulp, $);
 gulp.task('deploy:cname', deploy.cname);
 gulp.task('deploy:push', deploy.push);
 gulp.task('deploy:pushstage', deploy.pushstage);
-gulp.task('stage', deploy.stage);
-gulp.task('deploy', deploy.deploy);
 gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, $));
 gulp.task('html', require('./gulp-tasks/html')(gulp, $, isProduction));
 gulp.task('images', require('./gulp-tasks/images')(gulp, $));
@@ -94,40 +92,35 @@ gulp.src('.tmp/assets/**/*')
 // 'gulp build' -- same as 'gulp' but doesn't serve your site in your browser
 // 'gulp build --prod' -- same as above but with production settings
 gulp.task('build', gulp.series(
-  gulp.series('clean:assets', 'clean:gzip'),
+  gulp.parallel('clean:assets', 'clean:gzip'),
   gulp.series('assets', 'inject:head', 'inject:footer'),
   gulp.series('jekyll', 'assets:copy', 'html')
 ));
 
 gulp.task('build:stage', gulp.series(
-  gulp.series('clean:assets', 'clean:gzip'),
+  gulp.parallel('clean:assets', 'clean:gzip'),
   gulp.series('assets', 'inject:head', 'inject:footer'),
   gulp.series('jekyll:stage', 'assets:copy', 'html')
 ));
 
-// 'gulp deploy:cname' -- writes CNAME file to dist folder
-gulp.task('deploy:cname', () =>
-gulp.src([
-  'src/CNAME'
-])
-.pipe(gulp.dest('dist'))
-);
+gulp.task('stage', gulp.series('build:stage', 'deploy:pushstage'));
+gulp.task('deploy', gulp.series('build', 'deploy:push'));
 
-// 'gulp deploy:push' -- pushes your dist folder to Github
-gulp.task('deploy:push', () => {
-  return gulp.src('dist/**/*')
-  .pipe($.ghPages({
-    branch: 'master',
-    remoteUrl: 'git@github.com:GCDigitalFellows/gcdigitalfellows.github.io.git'
-  }));
-});
-
-// 'gulp deploy' -- copies CNAME and pushes to github
-gulp.task('deploy', gulp.series(
-  'build',
-  // 'deploy:cname',
-  'deploy:push'
-));
+// // 'gulp deploy:push' -- pushes your dist folder to Github
+// gulp.task('deploy:push', () => {
+//   return gulp.src('dist#<{(||)}>#*')
+//   .pipe($.ghPages({
+//     branch: 'master',
+//     remoteUrl: 'git@github.com:GCDigitalFellows/gcdigitalfellows.github.io.git'
+//   }));
+// });
+//
+// // 'gulp deploy' -- copies CNAME and pushes to github
+// gulp.task('deploy', gulp.series(
+//   'build',
+//   // 'deploy:cname',
+//   'deploy:push'
+// ));
 
 // 'gulp' -- cleans your assets and gzipped files, creates your assets and
 // injects them into the templates, then builds your site, copied the assets

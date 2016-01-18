@@ -17,12 +17,6 @@ module.exports = function (gulp, del) {
     },
     metadata: function () {
       return del(['src/.jekyll-metadata']);
-    },
-
-    // 'gulp clean' -- erases your assets and gzipped files
-    cleanall: function (done) {
-      gulp.series('clean:assets', 'clean:gzip');
-      done();
     }
   };
 };

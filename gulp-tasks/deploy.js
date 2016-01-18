@@ -25,26 +25,26 @@ module.exports = function (gulp, $) {
           branch: 'gh-pages',
           remoteUrl: 'git@github.com:GCDigitalFellows/gcdrb.git'
         }));
-    },
-
-    deploy: function (done) {
-      // 'gulp deploy' -- copies CNAME and pushes to github
-      gulp.series(
-        'build',
-        // 'deploy:cname',
-        'deploy:push'
-      );
-      done();
-    },
-
-    stage: function (done) {
-      // 'gulp deploy' -- copies CNAME and pushes to github
-      gulp.series(
-        'build:stage',
-        // 'deploy:cname',
-        'deploy:pushstage'
-      );
-      done();
     }
+
+    // deploy: function (done) {
+    //   // 'gulp deploy' -- copies CNAME and pushes to github
+    //   gulp.series(
+    //     'build',
+    //     // 'deploy:cname',
+    //     'deploy:push'
+    //   );
+    //   done();
+    // },
+    //
+    // stage: function (done) {
+    //   // 'gulp deploy' -- copies CNAME and pushes to github
+    //   gulp.series(
+    //     'build:stage',
+    //     // 'deploy:cname',
+    //     'deploy:pushstage'
+    //   );
+    //   done();
+    // }
   };
 };
