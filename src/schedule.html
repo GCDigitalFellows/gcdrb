@@ -54,7 +54,8 @@ regenerate: true
         {% endif %}
         <td><a
               href="{{site.baseurl}}/rooms/#{{timeslot.room}}">{{site.data.rooms[timeslot.room].name}}</a></td>
-          <td class="hidden-xs-down">{{timeslot.instructorlink}}</td>
+          <td class="hidden-xs-down">{{timeslot.instructorlink | replace: '="/',
+            '="zzzz/' | replace: 'zzzz', site.baseurl}}</td>
           {% comment %} {% if timeslot.track != 0 %}
           <td class="hidden-xs-down"><a href="{{timeslot.repo}}">repo</a></td>
         {% else %}
