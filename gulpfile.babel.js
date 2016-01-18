@@ -24,7 +24,7 @@ import autoprefixer from 'autoprefixer';
 // Yargs for command line arguments
 import {argv} from 'yargs';
 
-var isProduction = (argv._.indexOf('deploy') > -1 ? true : argv.prod);
+var isProduction = ((argv._.indexOf('deploy') > -1) || (argv._.indexOf('stage') > -1) ? true : argv.prod);
 
 var clean = require('./gulp-tasks/clean')(gulp, del);
 gulp.task('clean', clean.cleanall);
@@ -39,9 +39,11 @@ gulp.task('data:workshops', getData.workshops);
 gulp.task('data:partners', getData.partners);
 gulp.task('data:rooms', getData.rooms);
 gulp.task('data', gulp.parallel('data:schedule', 'data:workshops', 'data:people', 'data:partners', 'data:rooms'));
-var deploy = require('./gulp-tasks/deploy')(gulp);
+var deploy = require('./gulp-tasks/deploy')(gulp, $);
 gulp.task('deploy:cname', deploy.cname);
 gulp.task('deploy:push', deploy.push);
+gulp.task('deploy:pushstage', deploy.pushstage);
+gulp.task('stage', deploy.stage);
 gulp.task('deploy', deploy.deploy);
 gulp.task('fonts', require('./gulp-tasks/fonts')(gulp, $));
 gulp.task('html', require('./gulp-tasks/html')(gulp, $, isProduction));
@@ -51,6 +53,7 @@ gulp.task('inject:head', inject.head);
 gulp.task('inject:footer', inject.footer);
 var jekyll = require('./gulp-tasks/jekyll')(gulp, spawn, isProduction);
 gulp.task('jekyll', jekyll.build);
+gulp.task('jekyll:stage', jekyll.stage);
 gulp.task('jekyll:doctor', jekyll.doctor);
 gulp.task('rebuild', require('./gulp-tasks/rebuild')(gulp));
 var scripts = require('./gulp-tasks/scripts')(gulp, $, isProduction, browserSync);
@@ -94,6 +97,12 @@ gulp.task('build', gulp.series(
   gulp.series('clean:assets', 'clean:gzip'),
   gulp.series('assets', 'inject:head', 'inject:footer'),
   gulp.series('jekyll', 'assets:copy', 'html')
+));
+
+gulp.task('build:stage', gulp.series(
+  gulp.series('clean:assets', 'clean:gzip'),
+  gulp.series('assets', 'inject:head', 'inject:footer'),
+  gulp.series('jekyll:stage', 'assets:copy', 'html')
 ));
 
 // 'gulp deploy:cname' -- writes CNAME file to dist folder

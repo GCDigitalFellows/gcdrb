@@ -30,6 +30,25 @@ module.exports = function (gulp, spawn, isProduction) {
         });
       }
     },
+
+    stage: function (done) {
+      // Might be necessary for windows platforms
+      var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+
+      spawn('bundle', [
+        'exec',
+        jekyll,
+        'build',
+        '--config',
+        '_config.yml,_config.stage.yml'
+      ], {
+        stdio: 'inherit'
+      })
+      .on('exit', function(code) {
+        done(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+      });
+    },
+
     doctor: function (done) {
       // just run `jekyll doctor`
       spawn('bundle', [

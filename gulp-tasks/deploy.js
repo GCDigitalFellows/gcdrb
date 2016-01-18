@@ -1,4 +1,4 @@
-module.exports = function (gulp) {
+module.exports = function (gulp, $) {
   'use strict';
   return {
     cname: function () {
@@ -18,12 +18,31 @@ module.exports = function (gulp) {
         }));
     },
 
+    pushstage: function () {
+      // 'gulp deploy:stage' -- pushes dist folder to Github staging repo
+      return gulp.src('dist/**/*')
+        .pipe($.ghPages({
+          branch: 'gh-pages',
+          remoteUrl: 'git@github.com:GCDigitalFellows/gcdrb.git'
+        }));
+    },
+
     deploy: function (done) {
       // 'gulp deploy' -- copies CNAME and pushes to github
       gulp.series(
         'build',
         // 'deploy:cname',
         'deploy:push'
+      );
+      done();
+    },
+
+    stage: function (done) {
+      // 'gulp deploy' -- copies CNAME and pushes to github
+      gulp.series(
+        'build:stage',
+        // 'deploy:cname',
+        'deploy:pushstage'
       );
       done();
     }
