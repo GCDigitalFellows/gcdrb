@@ -10,3 +10,7 @@ sc:
   name: Science Center
   capacity: '65'
   location: "Fourth floor, Room 4102, southeast side of elevators, across from the Men's Restroom"
+dsl:
+  name: Digital Scholarship Lab
+  capacity: ''
+  location: 'Seventh floor, Room 7414, east end of building'

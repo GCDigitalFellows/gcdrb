@@ -54,7 +54,7 @@
   description: 'This session will go more in-depth into the different types of data researchers work with and the challenges that commonly arise when trying to clean data and prepare it for analysis. This session will be beneficial to anyone who needs to convert between data types, has large amounts of data to work with, or may encounter missing or messy data.'
   sort: e
 - title: Twitter API
-  link: ''
+  link: twitter
   tagline: 'Efficiently sift through enourmous amounts of twitter data using an API. . '
   icon: fa-twitter
   repo: ''

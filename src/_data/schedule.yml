@@ -89,7 +89,7 @@
       title: Python 3
       room: sc
       instructor: Software Carpentry
-      link: databases
+      link: python
       track: 1
       instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '3:15 - 3:30'
@@ -101,7 +101,7 @@
       title: Python 4
       room: sc
       instructor: Software Carpentry
-      link: databases
+      link: python
       track: 1
       instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '4:45 - 6:00'
@@ -132,7 +132,7 @@
       title: Twitter API
       room: '4419'
       instructor: 'Stephen Zweibel, Patrick Smyth'
-      link: data
+      link: twitter
       track: 1
       instructorlink: '<a href="/instructors/#stephen-zweibel">Stephen Zweibel</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '11:30 - 12:45'
@@ -140,7 +140,7 @@
       title: Data Formats
       room: '4422'
       instructor: Evan Misshula
-      link: ''
+      link: databases
       track: 2
       instructorlink: '<a href="/instructors/#stephen-zweibel">Stephen Zweibel</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '12:45 - 2:00'
@@ -237,19 +237,11 @@
       track: 0
     - time: '2:00 - 3:15'
       session: '15'
-      title: Data Visualization (Programmatic) 1
-      room: '4419'
+      title: 'Data Visualization '
+      room: sc
       instructor: Micki Kaufman
       link: viza
       track: 1
-      instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
-    - time: '2:00 - 3:15'
-      session: '15'
-      title: Data Visualization (WYSIWYG) 2
-      room: '4422'
-      instructor: Micki Kaufman
-      link: viza
-      track: 2
       instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
     - time: '3:15 - 3:30'
       title: Break
@@ -257,19 +249,11 @@
       track: 0
     - time: '3:30 - 4:45'
       session: '16'
-      title: Data Visualization (Programmatic) 2
-      room: '4419'
+      title: 'Data Visualization '
+      room: sc
       instructor: Micki Kaufman
       link: viza
       track: 1
-      instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
-    - time: '3:30 - 4:45'
-      session: '16'
-      title: Data Visualization (WYSIWYG) 2
-      room: '4422'
-      instructor: Micki Kaufman
-      link: viza
-      track: 2
       instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
     - time: '4:45 - 6:00'
       title: GCDI Community Plenary

@@ -8,19 +8,19 @@
   description: An organization that teaches basic lab skills for scientific computing so that researchers can get more done in less time and with less pain.
   image: sc.png
 - name: HILT
-  fullname: ''
+  fullname: Humanaties Intensive Learning and Teaching
   email: ''
-  website: ''
-  twitter: ''
+  website: 'http://www.dhtraining.org/hilt/'
+  twitter: '@HILT_MITH'
   facebook: ''
   github: ''
   description: ''
   image: hilt.png
 - name: DHSI
-  fullname: ''
+  fullname: Digital Humanaties Summer Institute
   email: ''
-  website: ''
-  twitter: ''
+  website: 'http://dhsi.org/'
+  twitter: '@DHInstitute'
   facebook: ''
   github: ''
   description: ''
@@ -28,17 +28,17 @@
 - name: NYPL
   fullname: New York Public Library
   email: ''
-  website: ''
-  twitter: ''
+  website: 'http://www.nypl.org/'
+  twitter: '@nypl'
   facebook: ''
   github: ''
   description: ''
   image: nypl.gif
 - name: ETCL
-  fullname: ''
+  fullname: The Electronic Textual Cultures Laboratory
   email: ''
-  website: ''
-  twitter: ''
+  website: 'http://etcl.uvic.ca/'
+  twitter: '@ETCLatUVic'
   facebook: ''
   github: ''
   description: ''
