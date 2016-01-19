@@ -31,10 +31,10 @@
       track: 0
     - time: '2:00 - 3:15'
       session: '3'
-      title: Git 1
+      title: Python 1
       room: sc
       instructor: Software Carpentry
-      link: git
+      link: python
       track: 1
       instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '3:15 - 3:30'
@@ -43,10 +43,10 @@
       track: 0
     - time: '3:30 - 4:45'
       session: '4'
-      title: Git 2
+      title: Python 2
       room: sc
       instructor: Software Carpentry
-      link: git
+      link: python
       track: 1
       instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '4:45 - 6:00'
@@ -62,10 +62,10 @@
       track: 0
     - time: '10:00 - 11:15'
       session: '5'
-      title: Python 1
+      title: Git 1
       room: sc
       instructor: Software Carpentry
-      link: python
+      link: git
       track: 1
       instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '11:15 - 11:30'
@@ -74,10 +74,10 @@
       track: 0
     - time: '11:30 - 12:45'
       session: '6'
-      title: Python 2
+      title: Git 2
       room: sc
       instructor: Software Carpentry
-      link: python
+      link: git
       track: 1
       instructorlink: '<a href="/instructors/#software-carpentry">Software Carpentry</a>'
     - time: '12:45 - 2:00'
