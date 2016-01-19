@@ -9,14 +9,16 @@ body {
   position: relative;
 }
 
-hr {
-  border-color: $theme-primary;
+.hr-light {
+  border-color: $white;
   border-width: 3px;
-  max-width: 50px;
+  max-width: 150px;
 }
 
-.light {
-  border-color: $white;
+.hr-primary {
+  border-color: $theme-primary;
+  border-width: 3px;
+  max-width: 150px;
 }
 
 a {
@@ -46,12 +48,13 @@ h6 {
   @include sans-serif-font;
 }
 
-.bg-primary {
+.bg-theme {
   background-color: $theme-primary;
 }
 
 .bg-alternate {
-  background-color: $white;
+  background-color: $theme-alternate;
+  color: $white;
 }
 
 .bg-dark {
@@ -283,6 +286,8 @@ footer {
 
 .section-heading {
   margin-top: 0;
+  border-bottom: 3px solid;
+  display: inline;
 }
 
 .service-box {
