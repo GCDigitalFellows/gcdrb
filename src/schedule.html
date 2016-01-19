@@ -31,13 +31,13 @@ regenerate: true
         </thead>
         {% for day in site.data.schedule %}
         <tr>
-          <thead class="table-info"><th colspan=5>{{day.day}}: {{day.date}}</th></thead>
+          <thead class="table-info" id="{{day.day | slugify}}"><th colspan=5>{{day.day}}: {{day.date}}</th></thead>
         </tr>
         {% for timeslot in day.timeslots %}
         {% if timeslot.track == 0 %}
         <tr>
         {% else %}
-        <tr id="{{timeslot.link}}">
+        <tr>
         {% endif %}
         {% comment %}Don't print duplicate time slots{% endcomment %}
         {% if timeslot.track == 2 %}
