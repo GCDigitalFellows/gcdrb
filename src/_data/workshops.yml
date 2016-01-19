@@ -44,13 +44,13 @@
     including converting between file types, resolving inconsistent metadata, and
     working with APIs.
   sort: d
-- title: Data Types
+- title: Data Formats
   link: databases
   tagline: 'Learn about the various forms data comes in. '
   icon: fa-database
   repo: gcdrb-databases
   more_info_link: ''
-  session: '7'
+  session: '10'
   description: 'This session will go more in-depth into the different types of data researchers work with and the challenges that commonly arise when trying to clean data and prepare it for analysis. This session will be beneficial to anyone who needs to convert between data types, has large amounts of data to work with, or may encounter missing or messy data.'
   sort: e
 - title: Twitter API
@@ -113,7 +113,7 @@
   icon: fa-globe
   repo: gcdrb-gis
   more_info_link: ''
-  session: '14'
+  session: '13'
   description: 'These sessions will explore the basics of mapping and geospatial representation of data and applythat knowledge to make maps, visualize spatial relationships and analyze spatial data on CartoDB. This session will be useful for anyone whose data has a spatial component or who wants to incorporate spatial relationships into their analysis.'
   sort: j
 - title: Machine Learning
@@ -122,6 +122,6 @@
   icon: fa-magic
   repo: gcdrb-machine-learning
   more_info_link: ''
-  session: '13'
+  session: '12'
   description: 'This session will introduce regression analysis, data preprocessing, model selection, supervised and unsupervised machine learning and dimension reduction using the sklearn machine learning library. This session is aimed towards researchers who want to find patterns in their data or use their data to predict a phenomena. '
   sort: m

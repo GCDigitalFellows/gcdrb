@@ -117,7 +117,7 @@
       track: 0
     - time: '10:00 - 11:15'
       session: '9'
-      title: Data Cleaning 1
+      title: Data Cleaning
       room: '4419'
       instructor: Evan Misshula
       link: data
@@ -157,7 +157,7 @@
       instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#patrick-smyth">Patrick Smyth</a>'
     - time: '2:00 - 3:15'
       session: '11'
-      title: NumPy/SciPy 2
+      title: Scientific Python
       room: '4422'
       instructor: Hannah Aizenman
       link: scipy

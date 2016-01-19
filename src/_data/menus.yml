@@ -8,8 +8,6 @@ home:
     href: '/schedule/'
   - name: Instructors
     href: '/instructors/'
-  - name: Partners
-    href: '/partners'
   - name: Contact
     href: '#contact'
     class: page-scroll
@@ -24,8 +22,6 @@ main:
     href: '/schedule/'
   - name: Instructors
     href: '/instructors/'
-  - name: Partners
-    href: '/partners'
   - name: Contact
     href: '/#contact'
 footer:
@@ -39,7 +35,5 @@ footer:
     href: '/schedule/'
   - name: Instructors
     href: '/instructors/'
-  - name: Partners
-    href: '/partners'
   - name: Contact
     href: '/#contact'
