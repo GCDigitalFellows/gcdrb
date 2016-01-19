@@ -9,9 +9,9 @@
   <div class="card-deck-wrapper">
     <div class="card-deck">
       {% for partner in site.data.partners %}
-      <div class="card" style="background: transparent; border: transparent;">
+      <div class="card text-center" style="background: transparent; border: transparent;">
         <a href="{{partner.website}}" target="_blank">
-          <img class="card-img-top img-fluid"
+          <img class="card-img-top img-fluid img-partner"
              src="{{site.baseurl}}/assets/images/logos/{{partner.image}}"
              alt="{{partner.fullname}}">
         </a>
