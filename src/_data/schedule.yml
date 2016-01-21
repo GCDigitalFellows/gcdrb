@@ -235,7 +235,7 @@
       title: Lunch
       room: sc
       track: 0
-    - time: '2:00 - 3:15'
+    - time: '2:00 - 3:30'
       session: '15'
       title: 'Data Visualization '
       room: sc
@@ -243,23 +243,7 @@
       link: viza
       track: 1
       instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
-    - time: '3:15 - 3:30'
-      title: Break
-      room: ''
-      track: 0
-    - time: '3:30 - 4:45'
-      session: '16'
-      title: 'Data Visualization '
-      room: sc
-      instructor: Micki Kaufman
-      link: viza
-      track: 1
-      instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
-    - time: '4:45 - 6:00'
-      title: GCDI Community Plenary
-      room: sc
-      track: 0
-    - time: '6:00 - 8:00'
+    - time: '3:30 - 4:30'
       title: Reception
       room: sc
       track: 0
