@@ -194,16 +194,15 @@
       title: Coffee
       room: sc
       track: 0
-    - time: '10:00 - 11:15'
+    - time: '10:00 - 11:30'
       session: '13'
-      title: |
-        GIS
+      title: Mapping
       room: '4419'
       instructor: 'Michelle Johnson McSweeney, Hannah AIzenman'
       link: gis
       track: 1
       instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
-    - time: '10:00 - 11:15'
+    - time: '10:00 - 11:30'
       session: '13'
       title: Digital Identity/Wordpress
       room: '4422'
@@ -211,19 +210,19 @@
       link: identity
       track: 2
       instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
-    - time: '11:15 - 11:30'
+    - time: '11:30 - 11:45'
       title: Break
       room: ''
       track: 0
-    - time: '11:30 - 12:45'
+    - time: '11:45 - 1:00'
       session: '14'
-      title: GIS
+      title: Mapping
       room: '4419'
       instructor: 'Michelle Johnson McSweeney, Hannah AIzenman'
       link: gis
       track: 1
       instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
-    - time: '11:30 - 12:45'
+    - time: '11:45 - 1:00'
       session: '14'
       title: HTML/CSS/JS
       room: '4422'
@@ -231,7 +230,7 @@
       link: html
       track: 2
       instructorlink: '<a href="/instructors/#michelle-johnson-mcsweeney">Michelle Johnson McSweeney</a>, <a href="/instructors/#hannah-aizenman">Hannah AIzenman</a>'
-    - time: '12:45 - 2:00'
+    - time: '1:00 - 2:00'
       title: Lunch
       room: sc
       track: 0
@@ -243,7 +242,11 @@
       link: viza
       track: 1
       instructorlink: '<a href="/instructors/#micki-kaufman">Micki Kaufman</a>'
-    - time: '3:30 - 4:30'
+    - time: '3:30 - 3:45'
+      title: 'Wrap Up '
+      room: sc
+      track: 0
+    - time: '3:45 - 4:30'
       title: Reception
       room: sc
       track: 0
