@@ -12,8 +12,8 @@ module.exports = function (gulp, spawn, isProduction) {
         ], {
           stdio: 'inherit'
         })
-        .on('exit', function(code) {
-          done(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+        .on('exit', function (code) {
+          done(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
         });
       } else if (isProduction) {
         spawn('bundle', [
@@ -25,8 +25,8 @@ module.exports = function (gulp, spawn, isProduction) {
         ], {
           stdio: 'inherit'
         })
-        .on('exit', function(code) {
-          done(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+        .on('exit', function (code) {
+          done(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
         });
       }
     },
@@ -44,23 +44,23 @@ module.exports = function (gulp, spawn, isProduction) {
       ], {
         stdio: 'inherit'
       })
-      .on('exit', function(code) {
-        done(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+      .on('exit', function (code) {
+        done(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
       });
     },
 
     doctor: function (done) {
       // just run `jekyll doctor`
       spawn('bundle', [
-          'exec',
-          jekyll,
-          'doctor'
-        ], {
-          stdio: 'inherit'
-        })
-        .on('exit', function(code) {
-          done(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
-        });
+        'exec',
+        'jekyll',
+        'doctor'
+      ], {
+        stdio: 'inherit'
+      })
+      .on('exit', function (code) {
+        done(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
+      });
     }
   };
 };

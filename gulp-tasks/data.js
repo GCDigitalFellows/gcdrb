@@ -2,8 +2,8 @@ module.exports = function (request, baby, yaml, fs, escape) {
   var docurl = 'https://docs.google.com/spreadsheets/d/16RfbdrnDHhRgP2iZwNw6AVSyWy5VoKn0nB0CpyMa658/pub?';
   return {
     workshops: function (done) {
-      var sheet = '585110058',
-          outfile = 'workshops.yml';
+      var sheet = '585110058';
+      var outfile = 'workshops.yml';
       request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
@@ -26,9 +26,9 @@ module.exports = function (request, baby, yaml, fs, escape) {
     },
 
     people: function (done) {
-      var rows,
-          sheet = '1411565774',
-          outfile = 'people.yml';
+      var rows;
+      var sheet = '1411565774';
+      var outfile = 'people.yml';
       request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
@@ -36,7 +36,7 @@ module.exports = function (request, baby, yaml, fs, escape) {
             for (var c = 0; c < rows.length; c++) {
               rows[c].bio = '<p>' + escape(rows[c].bio) + '</p>';
               rows[c].bio = rows[c].bio.replace(/(\n)/g, '</p><p>');
-              rows[c].id = rows[c].name.replace(/\s/g, "-").toLowerCase();
+              rows[c].id = rows[c].name.replace(/\s/g, '-').toLowerCase();
             }
             fs.writeFile('src/_data/' + outfile,
               yaml.dump(rows),
@@ -56,9 +56,9 @@ module.exports = function (request, baby, yaml, fs, escape) {
     },
 
     partners: function (done) {
-      var rows,
-          sheet = '2001419383',
-          outfile = 'partners.yml';
+      var rows;
+      var sheet = '2001419383';
+      var outfile = 'partners.yml';
       request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
@@ -81,10 +81,10 @@ module.exports = function (request, baby, yaml, fs, escape) {
     },
 
     rooms: function (done) {
-      var rows,
-          sheet = '1809179717',
-          outfile = 'rooms.yml',
-          outData = {};
+      var rows;
+      var sheet = '1809179717';
+      var outfile = 'rooms.yml';
+      var outData = {};
       request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
@@ -92,10 +92,10 @@ module.exports = function (request, baby, yaml, fs, escape) {
             for (var i = 0; i < rows.length; i++) {
               var row = rows[i];
               outData[row.short] = {
-                  name: row.long,
-                  capacity: row.capacity,
-                  location: row.location
-                };
+                name: row.long,
+                capacity: row.capacity,
+                location: row.location
+              };
             }
             fs.writeFile('src/_data/' + outfile,
               yaml.dump(outData),
@@ -116,8 +116,8 @@ module.exports = function (request, baby, yaml, fs, escape) {
     },
 
     schedule: function (done) {
-      var sheet = '0',
-          outfile = 'schedule.yml';
+      var sheet = '0';
+      var outfile = 'schedule.yml';
       request(docurl + 'gid=' + sheet + '&single=true&output=csv',
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
@@ -183,16 +183,16 @@ module.exports = function (request, baby, yaml, fs, escape) {
 };
 
 function linkFromNames(names) {
-  var nameList = names.split(",");
-  var links = "";
+  var nameList = names.split(',');
+  var links = '';
   for (var c = 0; c < nameList.length; c++) {
     var name = nameList[c].trim();
-    if (links !== "") {
-      links += ", ";
+    if (links !== '') {
+      links += ', ';
     }
-    links += "<a href=\"/instructors/#";
-    name = name.replace(/\s/g, "-").toLowerCase();
-    links += name + "\">" + nameList[c].trim() + "</a>";
+    links += '<a href="/instructors/#';
+    name = name.replace(/\s/g, '-').toLowerCase();
+    links += name + '\">' + nameList[c].trim() + '</a>';
   }
   return links;
 }

@@ -16,7 +16,7 @@ var escape = require('escape-html');
 // Delete stuff
 import del from 'del';
 // Used to run shell commands
-import shell from 'shelljs';
+// import shell from 'shelljs';
 // BrowserSync is used to live-reload your website
 import browserSync from 'browser-sync';
 // AutoPrefixer
