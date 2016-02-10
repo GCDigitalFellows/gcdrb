@@ -22,7 +22,7 @@ permalink: /workshops/
   <div class="row m-b-3">
     <div class="col-md-6 col-md-offset-3">
       <table class="table table-striped" id="top">
-        {% for topic in site.data.workshops %}
+      {% for topic in site.data.workshops %}
         <tr>
           <td>{{topic.title}}</td>
           <td><a href="#{{topic.link}}" class="page-scroll">details</a></td>
@@ -32,14 +32,14 @@ permalink: /workshops/
           {% endif %}
           <!-- <td><a href="{{site.baseurl}}/schedule/#{{topic.session}}">schedule</a></td> -->
         </tr>
-        {% endfor %}
+      {% endfor %}
       </table>
     </div>
   </div>
   <div class="row">
     <h2 class="text-center p-a-2">Workshop Details</h2>
     <div class="col-md-8 col-md-offset-2">
-      {% for topic in site.data.workshops %}
+    {% for topic in site.data.workshops %}
       <div class="card" id="{{topic.link}}">
         {% comment %}<img class="card-img-top" src="{{site.baseurl}}/assets/images/header.jpg" alt="Card image cap">{% endcomment %}
         <div class="card-block">
@@ -54,7 +54,7 @@ permalink: /workshops/
           <p class="card-text">{{topic.description}}</p>
         </div>
       </div>
-      {% endfor %}
+    {% endfor %}
     </div>
   </div>
 </section>

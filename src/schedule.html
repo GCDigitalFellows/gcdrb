@@ -30,40 +30,39 @@ regenerate: true
           <!-- <th class="hidden&#45;xs&#45;down">Materials</th> -->
         </thead>
         {% for day in site.data.schedule %}
-        <tr>
-          <thead class="table-info" id="{{day.day | slugify}}"><th colspan=5>{{day.day}}: {{day.date}}</th></thead>
-        </tr>
-        {% for timeslot in day.timeslots %}
-        {% if timeslot.track == 0 %}
-        <tr>
-        {% else %}
-        <tr>
-        {% endif %}
-        {% comment %}Don't print duplicate time slots{% endcomment %}
-        {% if timeslot.track == 2 %}
-          <td></td>
-        {% else %}
-          <td>{{timeslot.time}}</td>
-        {% endif %}
-        {% if timeslot.track != 0 %}
-          <td class="hidden-md-down">{{timeslot.session}}</td>
-          <td><a href="{{site.baseurl}}/workshops/#{{timeslot.link}}">{{timeslot.title}}</a></td>
-        {% else %}
-          <td class="hidden-md-down"></td>
-          <td>{{timeslot.title}}</td>
-        {% endif %}
-        <td><a
-              href="{{site.baseurl}}/rooms/#{{timeslot.room}}">{{site.data.rooms[timeslot.room].name}}</a></td>
-          <td class="hidden-xs-down">{{timeslot.instructorlink | replace: '="/',
-            '="zzzz/' | replace: 'zzzz', site.baseurl}}</td>
-          {% comment %} {% if timeslot.track != 0 %}
-          <td class="hidden-xs-down"><a href="{{timeslot.repo}}">repo</a></td>
-        {% else %}
-          <td></td>
-          {% endif %} {% endcomment %}
-        </tr>
+          <tr>
+            <thead class="table-info" id="{{day.day | slugify}}"><th colspan=5>{{day.day}}: {{day.date}}</th></thead>
+          </tr>
+
+          {% for timeslot in day.timeslots %}
+            <tr>
+            {% if timeslot.track == 2 %}
+              <td></td>
+            {% else %}
+              <td>{{timeslot.time}}</td>
+            {% endif %}
+            {% if timeslot.track != 0 %}
+              <td class="hidden-md-down">{{timeslot.session}}</td>
+              <td><a href="{{site.baseurl}}/workshops/#{{timeslot.link}}">{{timeslot.title}}</a></td>
+            {% else %}
+              <td class="hidden-md-down"></td>
+              <td>{{timeslot.title}}</td>
+            {% endif %}
+            <td>
+              <a href="{{site.baseurl}}/rooms/#{{timeslot.room}}">{{site.data.rooms[timeslot.room].name}}</a>
+            </td>
+            <td class="hidden-xs-down">{{timeslot.instructorlink | replace: '="/', '="zzzz/' | replace: 'zzzz', site.baseurl}}</td>
+            {% comment %}
+            {% if timeslot.track != 0 %}
+              <td class="hidden-xs-down"><a href="{{timeslot.repo}}">repo</a></td>
+            {% else %}
+              <td></td>
+            {% endif %}
+            {% endcomment %}
+          </tr>
+          {% endfor %}
+
         {% endfor %}
-      {% endfor %}
       </table>
     </div>
   </div>

@@ -426,6 +426,20 @@ img::selection {
   color: $white;
 }
 
+.application-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 3200px;
+  position: relative;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
 .application-question {
   font-weight: bold;
 }
