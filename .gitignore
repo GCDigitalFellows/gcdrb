@@ -62,7 +62,7 @@ test/
 bower_components
 
 # Output folders
-dist
+_site
 
 # hide the AWS and Rsync credentials file
 aws-credentials.json
