@@ -68,7 +68,7 @@
     "watch": "parallelshell \"npm run watch:scripts -s\" \"npm run watch:styles -s\"",
     "watch:scripts": "watch-run -p 'assets/javascript/*.js' npm run lint && npm run scripts:watch",
     "watch:styles": "watch-run -p 'assets/scss/**/*.{scss,sass}' npm run styles:watch",
-    "watch:jekyll": "watch-run -p '*.{html,md},_includes/*.{html,md},assets/images/*' npm run jekyll",
+    "watch:jekyll": "watch-run -p '*.{html,md},_includes/*.{html,md},assets/images/*,_data/*' npm run jekyll",
     "build": "jekyll serve --port 9090 --no-watch",
     "livereload": "live-reload --port 9091 _site/",
     "serve": "npm run assets && parallelshell \"npm run build\" \"npm run livereload\" \"npm run watch:scripts\" \"npm run watch:styles\" \"npm run watch:jekyll\""
