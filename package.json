@@ -9,6 +9,10 @@
   },
   "sass_includes": "./bower_components/bootstrap/scss",
   "license": "GPL-3.0",
+  "repository" :
+    { "type" : "git"
+    , "url" : "https://github.com/gcdigitalfellows/gcdrb.git"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "babel-core": "^6.4.5",
