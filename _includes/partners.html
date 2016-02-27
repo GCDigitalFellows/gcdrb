@@ -12,7 +12,7 @@
       <div class="card text-center" style="background: transparent; border: transparent;">
         <a href="{{partner.website}}" target="_blank">
           <img class="card-img-top img-fluid img-partner"
-             src="{{site.baseurl}}/assets/images/logos/{{partner.image}}"
+             src="{{ '/images/logos/' | prepend: site.baseurl }}{{partner.image}}"
              alt="{{partner.fullname}}">
         </a>
       </div>

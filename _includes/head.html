@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +15,12 @@
 
   <!-- CSS -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/vendor.min.css">
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.min.css">
+  <link rel="stylesheet" href="{{ '/css/vendor.min.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl }}">
   <!-- endinject -->
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/assets/images/touch/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/images/touch/apple-touch-icon-144-precomposed.png' | prepend: site.baseurl }}">
+  <link rel="shortcut icon" href="{{ '/icon.ico' | prepend: site.baseurl }}">
 
 </head>

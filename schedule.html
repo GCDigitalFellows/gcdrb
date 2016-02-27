@@ -47,13 +47,13 @@ regenerate: true
         {% endif %}
         {% if timeslot.track != 0 %}
           <td class="hidden-md-down">{{timeslot.session}}</td>
-          <td><a href="{{site.baseurl}}/workshops/#{{timeslot.link}}">{{timeslot.title}}</a></td>
+          <td><a href="{{ '/workshops/#{{timeslot.link}}' | prepend: site.baseurl }}">{{timeslot.title}}</a></td>
         {% else %}
           <td class="hidden-md-down"></td>
           <td>{{timeslot.title}}</td>
         {% endif %}
         <td><a
-              href="{{site.baseurl}}/rooms/#{{timeslot.room}}">{{site.data.rooms[timeslot.room].name}}</a></td>
+              href="{{ '/rooms/#{{timeslot.room}}' | prepend: site.baseurl }}">{{site.data.rooms[timeslot.room].name}}</a></td>
           <td class="hidden-xs-down">{{timeslot.instructorlink | replace: '="/',
             '="zzzz/' | replace: 'zzzz', site.baseurl}}</td>
           {% comment %} {% if timeslot.track != 0 %}
