@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 #
 # Helper functions
@@ -106,25 +106,29 @@ if ! type 'git' > /dev/null 2>&1; then
 fi
 
 # install n and nodejs
-if ! type 'n' > /dev/null 2>&1; then
-  if type 'npm' > /dev/null 2>&1; then
-    warning "It looks like you installed node.js/npm without using n. I recommend uninstalling the system node.js and using n to manage your node environment. For now I'm going to leave things alone, but you've been warned."
-    warning "If you want to try it my way, uninstall node/npm and re-run this script."
-  else
-    log "Installing n using n-install"
-    curl -L http://git.io/n-install | bash
-  fi
+if ! type 'npm' > /dev/null 2>&1; then
+	if [[ `uname` == 'Darwin' ]]; then
+	  log "Installing the latest version of node/npm via n"
+		curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+	elif [[ `uname` == 'Linux' ]]; then
+		if type 'apt-get' > /dev/null 2>&1; then
+			curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+			sudo apt-get install -y nodejs
+			sudo apt-get install -y build-essential
+		elif type 'yum' > /dev/null 2>&1; then
+			curl --silent --location https://rpm.nodesource.com/setup_5.x | bash -
+			sudo yum -y install nodejs
+			sudo yum groupinstall 'Development Tools'
+		else
+			error 'Please manually install node.js: https://nodejs.org/en/download/'
+		fi
+	fi
 else
-  if ! type 'npm' > /dev/null 2>&1; then
-    log "Installing the latest version of node/npm via n"
-    n latest
-  else
-    warning 'Looks like n and npm are already installed. Please double check your system configuration to be sure that the correct versions of node/npm are being used.'
-    warning '`which npm` should return something like "[User Home]/n/bin/npm" '
-    warning 'Result of `which npm`:'
-    which npm
-    warning 'If the above output does not look correct, please uninstall npm and re-run this script. You might also need to add "$N_PREFIX/bin" to your PATH variable (e.g., in .bashrc) and/or set the environment variable N_PREFIX to your n installation directory (e.g., ~/n).'
-  fi
+  warning 'Looks like n and npm are already installed. Please double check your system configuration to be sure that the correct versions of node/npm are being used and that it is included in your PATH.'
+  warning '`which npm` should return something like "/usr/local/bin/npm" '
+  warning 'Result of `which npm`:'
+  which npm
+  warning 'If the above output does not look correct, please uninstall npm and re-run this script.'
 fi
 
 # install chruby and ruby
@@ -161,7 +165,7 @@ if ! type 'chruby' > /dev/null 2>&1; then
 
     # reload the shell to get chruby'ing
     reload_env
-    log "Reloading your shell"
+    log "Reinitializing the shell"
   fi
 fi
 
@@ -200,4 +204,4 @@ else
   warning "ruby-install not found. Please double check your ruby installation to be sure everything is configured correctly. I recommend against using the system ruby just to keep things clean."
 fi
 
-warning "Finished installing the required tools. Please open a new shell and run 'bash -c \"$(curl -L https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup2.sh)\"'"
+warning "Finished installing the required tools to set up the development environment. Please open a *new* shell (needed to initialize some stuff) and run 'bash -c \"$(curl -L https://raw.githubusercontent.com/GCDigitalFellows/gcdrb/master/setup2.sh)\"'"

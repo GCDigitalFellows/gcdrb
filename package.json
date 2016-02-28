@@ -12,16 +12,6 @@
     "type": "git",
     "url": "https://github.com/gcdigitalfellows/gcdrb.git"
   },
-  "exclude": [
-    "bower_components",
-    "node_modules",
-    "*.sh",
-    "js/main.js",
-    "bower.json",
-    "get_data.js",
-    "build_vendor.js",
-    "README.md"
-  ],
   "jekyll_dir": "_site",
   "sass_includes": "bower_components/bootstrap/scss",
   "devDependencies": {
@@ -42,7 +32,6 @@
     "livereload": "^0.4.1",
     "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
-    "opener": "^1.4.1",
     "parallelshell": "^2.0.0",
     "request": "^2.67.0",
     "rimraf": "^2.5.2",
@@ -58,7 +47,6 @@
     "lint:js": "eslint js/main.js",
     "lint:sass": "sass-lint css/style.scss",
     "scripts": "browserify js/main.js | uglifyjs -o js/main.min.js",
-    "scripts:vendor": "node build_vendor.js js",
     "styles": "node-sass --output-style compressed --include-path $npm_package_sass_includes --follow _sass/style.scss -o css",
     "watch:styles": "node-sass -w --output-style compressed --include-path $npm_package_sass_includes --follow _sass/style.scss -o css",
     "watch:scripts": "watchify js/main.js -o 'uglifyjs -cm > js/main.min.js'",

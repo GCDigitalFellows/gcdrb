@@ -27,14 +27,15 @@ buildify('bower_components')
   .save('../css/vendor.min.css');
 
 // Copy vendor fonts
-fs.copy(
-  'bower_components/font-awesome/fonts',
-  'bower_components/font-mfizz/fonts',
-  'font',
-  function (err) {
-    if (err) {
-      return console.error(err);
-    }
-    return console.log('copied fonts');
+var fontList = [
+  'bower_components/font-awesome/fonts/',
+  'bower_components/font-mfizz/fonts/'
+];
+for (var c = 0; c < fontList.length; c++) {
+  try {
+    fs.copySync(fontList[c], 'fonts');
+    console.log('Copied ' + fontList[c] + ' to ./fonts');
+  } catch (err) {
+    console.error(err);
   }
-);
+}

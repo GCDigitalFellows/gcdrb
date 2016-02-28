@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 function confirm () {
     # call with a prompt string or use a default
     read -r -p "${1:-Are you sure? [y/N]} " response
@@ -29,15 +29,7 @@ if ! type 'bundle' > /dev/null 2>&1; then
   log "Bundler was installed"
 fi
 
-warning "This package depends on gulp-cli#4.0."
-if (confirm "Ok to uninstall your global gulp and install gulp4 [y/N]?"); then
-  npm uninstall gulp -g
-  npm install -g gulpjs/gulp-cli#4.0
-else
-  warning "Please be sure that you have gulp-cli#4.0 installed globally or else you will get errors when you try to run gulp on this project."
-fi
-
-log "Installing bower globally"
+log "Installing bower globally (if it dooesn't work, you might need to run this as root)"
 npm install -g bower
 
 if [[ -d "./gcdrb" ]]; then
@@ -54,4 +46,4 @@ bower install
 log "Installing Ruby dependencies"
 bundle install
 
-log "Installation complete! Run 'gulp' to build the site and view it on your local computer."
+log "Installation complete! Run 'npm run serve' to build the site and view it on your local computer."
