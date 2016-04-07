@@ -20,6 +20,11 @@ exclude:
   - bower_components
   - node_modules
   - '.*'
+  - README.md
+  - gulpfile.js
+  - getdata.js
+  - build_vendor.js
+  - package.json
 
 # _config.stage.yml overwrites these options when you run locally
 future: false
