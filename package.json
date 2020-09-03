@@ -54,7 +54,7 @@
     "kid_process": "^0.5.4",
     "livereload": "^0.4.1",
     "mkdirp": "^0.5.1",
-    "node-sass": "^3.4.2",
+    "node-sass": ">=4.13.1",
     "parallelshell": "^2.0.0",
     "plumber": "^0.4.8",
     "request": "^2.69.0",
